@@ -32,19 +32,9 @@
 							</div>
 						</div>
 						
-						<div class="form-row">
-							<div class="form-group col-md-4">
-								<label for="maphong">Mã phòng</label>
-								<input type="text" class="form-control" id="maphong" name="maphong">
-							</div>
-							<div class="form-group col-md-4">
-								<label for="mabenh">Mã bệnh</label>
-								<input type="text" class="form-control" id="mabenh" name="mabenh">
-							</div>
-							<div class="form-group col-md-4">
-								<label for="mabaohiem">Mã bảo hiểm</label>
-								<input type="text" class="form-control" id="mabaohiem" name="mabaohiem">
-							</div>
+						<div class="form-group"	
+							<label for="mabaohiem">Mã bảo hiểm</label>
+							<input type="text" class="form-control" id="mabaohiem" name="mabaohiem">
 						</div>
 						
 						<div class="form-row">
@@ -84,8 +74,6 @@
 				$('#id').val(doc.id);
 				$('#mabenhnhan').val(doc.data().mabenhnhan);
 				$('#tenbenhnhan').val(doc.data().tenbenhnhan);
-				$('#maphong').val(doc.data().maphong);
-				$('#mabenh').val(doc.data().mabenh);
 				$('#mabaohiem').val(doc.data().mabaohiem);
 				$('#ngaysinh').val(doc.data().ngaysinh);
 				$('#dienthoai').val(doc.data().dienthoai);
@@ -113,8 +101,6 @@
 		washingtonRef.update({
 				mabenhnhan: "<?php echo $_POST['mabenhnhan'];?>",
 				tenbenhnhan: "<?php echo $_POST['tenbenhnhan'];?>",
-				maphong: "<?php echo $_POST['maphong'];?>",
-				mabenh: "<?php echo $_POST['mabenh'];?>",
 				mabaohiem: "<?php echo $_POST['mabaohiem'];?>",
 				ngaysinh: "<?php echo $_POST['ngaysinh'];?>",
 				dienthoai: "<?php echo $_POST['dienthoai'];?>",

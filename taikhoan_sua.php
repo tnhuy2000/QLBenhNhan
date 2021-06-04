@@ -9,31 +9,35 @@
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" />
 		<link rel="stylesheet" href="css/all.min.css" />
 		
-		<title>Sửa bệnh</title>
+		<title>Sửa tài khoản</title>
 	</head>
 	<body>
 		<div class="container">
 			<?php include "navbar.php"; ?>
 			
 			<div class="card mt-3">
-				<h5 class="card-header">Sửa bệnh</h5>
+				<h5 class="card-header">Sửa tài khoản</h5>
 				<div class="card-body">
-					<form action="benh_sua.php" method="post">
+					<form action="taikhoan_sua.php" method="post">
 						<input type="text" id="id" name="id" hidden />
 						
 						<div class="form-group">
-							<label for="mabenh">Mã bệnh</label>
-							<input type="text" class="form-control" id="mabenh" name="mabenh">
+							<label for="hoten">Họ tên</label>
+							<input type="text" class="form-control" id="hoten" name="hoten" required />
 						</div>
-					  
+						
 						<div class="form-group">
-							<label for="tenbenh">Tên bệnh</label>
-							<input type="text" class="form-control" id="tenbenh" name="tenbenh">
+							<label for="taikhoan">Tài khoản</label>
+							<input type="text" class="form-control" id="taikhoan" name="taikhoan" required />
 						</div>
-					  
+						
 						<div class="form-group">
-							<label for="makhoa">Mã khoa</label>
-							<input type="text" class="form-control" id="makhoa" name="makhoa">
+							<label for="matkhau">Mật khẩu</label>
+							<input type="text" class="form-control" id="matkhau" name="matkhau" required />
+						</div>
+						<div class="form-group">
+							<label for="quyen">Quyền</label>
+							<input type="text" class="form-control" id="quyen" name="quyen" required />
 						</div>
 						
 						<button type="submit" class="btn btn-info">Cập nhật</button>
@@ -50,15 +54,16 @@
 		{
 			?>
 		<script>
-		var docRef = db.collection("BENH").doc("<?php echo $_GET['id'];?>");
+		var docRef = db.collection("TAIKHOAN").doc("<?php echo $_GET['id'];?>");
 
 		docRef.get().then((doc) => {
 			if (doc.exists) {
 				//console.log("Document data:", doc.data());
 				$('#id').val(doc.id);
-				$('#mabenh').val(doc.data().mabenh);
-				$('#tenbenh').val(doc.data().tenbenh);
-				$('#makhoa').val(doc.data().makhoa);
+				$('#hoten').val(doc.data().hoten);
+				$('#taikhoan').val(doc.data().taikhoan);
+				$('#matkhau').val(doc.data().matkhau);
+				$('#quyen').val(doc.data().quyen);
 			} else {
 				// doc.data() will be undefined in this case
 				console.log("No such document!");
@@ -71,21 +76,22 @@
 		}
 		?>
 		<?php
-		if(isset ($_POST['mabenh']))
+		if(isset ($_POST['taikhoan']))
 		{
 			?>
 		<script>
-		var washingtonRef = db.collection("BENH").doc("<?php echo $_POST['id'];?>");
+		var washingtonRef = db.collection("TAIKHOAN").doc("<?php echo $_POST['id'];?>");
 
 		// Set the "capital" field of the city 'DC'
 		washingtonRef.update({
-				mabenh: "<?php echo $_POST['mabenh'];?>",
-				tenbenh: "<?php echo $_POST['tenbenh'];?>",
-				makhoa: "<?php echo $_POST['makhoa'];?>"
+				hoten: "<?php echo $_POST['hoten'];?>",
+				taikhoan: "<?php echo $_POST['taikhoan'];?>",
+				matkhau: "<?php echo $_POST['matkhau'];?>",
+				quyen: "<?php echo $_POST['quyen'];?>"
 		})
 		.then(() => {
 			//console.log("Document successfully updated!");
-			location.href="benh.php";
+			location.href="taikhoan.php";
 		})
 		.catch((error) => {
 			// The document probably doesn't exist.

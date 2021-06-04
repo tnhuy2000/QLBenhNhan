@@ -9,14 +9,14 @@
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" />
 		<link rel="stylesheet" href="css/all.min.css" />
 		
-		<title>Xóa khoa</title>
+		<title>Xóa phiếu khám</title>
 	</head>
 	<body>
 		<div class="container">
 			<?php include "navbar.php"; ?>
 			
 			<div class="card mt-3">
-				<h5 class="card-header">Xóa khoa</h5>
+				<h5 class="card-header">Xóa phiếu khám</h5>
 				<div class="card-body">
 				
 				</div>
@@ -27,9 +27,9 @@
 		
 		<?php include "javascript.php"; ?>
 		<script>
-			db.collection("KHOA").doc("<?php echo $_GET['id'];?>").delete().then(() => {
+			db.collection("PHIEUKHAM").doc("<?php echo $_GET['id'];?>").delete().then(() => {
 				///console.log("Document successfully deleted!");
-				location.href="khoa.php";
+				location.href="phieukham.php";
 			}).catch((error) => {
 				console.error("Error removing document: ", error);
 			});

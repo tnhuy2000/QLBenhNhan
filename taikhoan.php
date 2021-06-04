@@ -9,25 +9,25 @@
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" />
 		<link rel="stylesheet" href="css/all.min.css" />
 		
-		<title>Bệnh</title>
+		<title>Danh sách tài khoản</title>
 	</head>
 	<body>
 		<div class="container">
 			<?php include "navbar.php"; ?>
 			
 			<div class="card mt-3">
-				<h5 class="card-header">Bệnh</h5>
+				<h5 class="card-header">Danh sách tài khoản</h5>
 				<div class="card-body">
 				
-				<a href="benh_them.php" style="float: right" class ="btn btn-outline-success mb-2"><i class="fa fa-plus-square"></i> Thêm Mới</a>
+				<a href="dangky.php" style="float: right" class ="btn btn-outline-success mb-2"><i class="fa fa-plus-square"></i> Thêm Mới</a>
 					<table class="table table-bordered table-hover table-sm">
 						  <thead>
 							<tr>
 							  <th scope="col">#</th>
-							  <th scope="col">Mã bệnh</th>
-							  <th scope="col">Tên bệnh</th>
-							  <th scope="col">Mã khoa</th>
-							  
+							  <th scope="col">Họ tên</th>
+							  <th scope="col">Tài khoản</th>
+							  <th scope="col">Mật khẩu</th>
+							  <th scope="col">Quyền</th>
 							  <th scope="col">Sửa</th>
 							  <th scope="col">Xóa</th>
 							</tr>
@@ -44,7 +44,7 @@
 		<?php include "javascript.php"; ?>
 		<script>
 		
-		db.collection("BENH").get().then((querySnapshot) => {
+		db.collection("TAIKHOAN").get().then((querySnapshot) => {
 			var stt = 1;
 			var output = "";
 			
@@ -52,12 +52,12 @@
 				
 				output+='<tr>';
 					output+='<th scope="row">'+stt+'</th>';
-					output+='<td>'+doc.data().mabenh+'</td>';
-					output+='<td>'+doc.data().tenbenh+'</td>';
-					output+='<td>'+doc.data().makhoa+'</td>';
-					
-					output+= '<td class="text-center"><a href="benh_sua.php?id='+doc.id+'"><i class="fa fa-pencil"></i></a></td>';
-					output+= '<td class="text-center"><a onclick="return confirm(\'Bạn có muốn xóa bệnh '+doc.data().tenbenh+' không ???\')" href="benh_xoa.php?id='+doc.id+'"><i class="fa fa-minus-square text-danger"></i></a></td>';
+					output+='<td>'+doc.data().hoten+'</td>';
+					output+='<td>'+doc.data().taikhoan+'</td>';
+					output+='<td>'+doc.data().matkhau+'</td>';
+					output+='<td>'+doc.data().quyen+'</td>';
+					output+= '<td class="text-center"><a href="taikhoan_sua.php?id='+doc.id+'"><i class="fa fa-pencil"></i></a></td>';
+					output+= '<td class="text-center"><a onclick="return confirm(\'Bạn có muốn xóa tài khoản '+doc.data().hoten+' không ???\')" href="taikhoan_xoa.php?id='+doc.id+'"><i class="fa fa-minus-square text-danger"></i></a></td>';
 				output+='</tr>';
 				stt++;
 			});

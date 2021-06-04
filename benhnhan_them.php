@@ -29,22 +29,10 @@
 								<input type="text" class="form-control" id="tenbenhnhan" name="tenbenhnhan">
 							</div>
 						</div>
-						
-						<div class="form-row">
-							<div class="form-group col-md-4">
-								<label for="maphong">Mã phòng</label>
-								<input type="text" class="form-control" id="maphong" name="maphong">
-							</div>
-							<div class="form-group col-md-4">
-								<label for="mabenh">Mã bệnh</label>
-								<input type="text" class="form-control" id="mabenh" name="mabenh">
-							</div>
-							<div class="form-group col-md-4">
-								<label for="mabaohiem">Mã bảo hiểm</label>
-								<input type="text" class="form-control" id="mabaohiem" name="mabaohiem">
-							</div>
+						<div class="form-group">
+							<label for="mabaohiem">Mã bảo hiểm</label>
+							<input type="text" class="form-control" id="mabaohiem" name="mabaohiem">
 						</div>
-						
 						<div class="form-row">
 							<div class="form-group col-md-6">
 								<label for="ngaysinh">Ngày sinh</label>
@@ -77,8 +65,6 @@
 			db.collection("BENHNHAN").add({
 				mabenhnhan: "<?php echo $_POST['mabenhnhan'];?>",
 				tenbenhnhan: "<?php echo $_POST['tenbenhnhan'];?>",
-				maphong: "<?php echo $_POST['maphong'];?>",
-				mabenh: "<?php echo $_POST['mabenh'];?>",
 				mabaohiem: "<?php echo $_POST['mabaohiem'];?>",
 				diachi: "<?php echo $_POST['diachi'];?>",
 				ngaysinh: "<?php echo $_POST['ngaysinh'];?>",

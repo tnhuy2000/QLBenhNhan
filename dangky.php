@@ -19,22 +19,22 @@
 				<div class="row">
 					<div class="col-xs-6">
 						<div class="well">
-							<form action="index.php?action=dangnhap_xuly" method="post">
+							<form action="dangky.php" method="post">
 								<div class="form-group">
-									<label for="HoVaTen">Họ và tên</label>
-									<input type="text" class="form-control" id="HoVaTen" name="HoVaTen" required />
+									<label for="hoten">Họ tên</label>
+									<input type="text" class="form-control" id="hoten" name="hoten" required />
 									<span class="help-block"></span> 
 								</div>
 							   
 								<div class="form-group">
-									<label for="username" class="control-label">Tài khoản</label>
-									<input class="form-control" id="username" name="username" type="text" required   >
+									<label for="taikhoan" class="control-label">Tài khoản</label>
+									<input class="form-control" id="taikhoan" name="taikhoan" type="text" required   >
 									<span class="help-block"></span>
 								</div>
 								
 								<div class="form-group">
-									<label for="password" class="control-label">Mật khẩu</label>
-									<input class="form-control" id="password" name="password" type="password" required  >
+									<label for="matkhau" class="control-label">Mật khẩu</label>
+									<input class="form-control" id="matkhau" name="matkhau" type="password" required  >
 									<span class="help-block"></span> 
 								</div>
 								
@@ -43,7 +43,13 @@
 									<input type="password" class="form-control" id="XacNhanMatKhau" name="XacNhanMatKhau" required />
 									<span class="help-block"></span> 
 								</div>
-							   
+								<div class="form-group">
+									<label for="quyen">Quyền</label>
+									<div class="radio">
+										<label><input type="radio" name="quyen" id="quyen">Admin</label>
+										<label><input type="radio" name="quyen" id="quyen">User</label>
+									</div>
+								</div>
 								<button type="submit" class="btn btn-success btn-block"><i class="fad fa-sign-in-alt"></i>Đăng ký</button>
 							</form>
 						</div>
@@ -69,5 +75,29 @@
 			</div>
 		</div>
 	</div>
+	<?php include "javascript.php"; ?>
+		<?php
+		if(isset ($_POST['taikhoan']))
+		{
+			?>
+		<script>
+			db.collection("TAIKHOAN").add({
+				taikhoan: "<?php echo $_POST['taikhoan'];?>",
+				matkhau: "<?php echo $_POST['matkhau'];?>",
+				hoten: "<?php echo $_POST['hoten'];?>",
+				quyen: "<?php echo $_POST['quyen'];?>",
+			})
+			.then((docRef) => {
+				///console.log("Document written with ID: ", docRef.id);
+				location.href="taikhoan.php";
+			})
+			.catch((error) => {
+				console.error("Error adding document: ", error);
+			});
+
+		</script>
+		<?php
+		}
+	?>
 </body>
 </html>

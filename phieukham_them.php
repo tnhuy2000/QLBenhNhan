@@ -9,29 +9,38 @@
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" />
 		<link rel="stylesheet" href="css/all.min.css" />
 		
-		<title>Thêm bệnh</title>
+		<title>Thêm phiếu khám</title>
 	</head>
 	<body>
 		<div class="container">
 			<?php include "navbar.php"; ?>
 			
 			<div class="card mt-3">
-				<h5 class="card-header">Thêm bệnh</h5>
+				<h5 class="card-header">Thêm phiếu khám</h5>
 				<div class="card-body">
-					<form action="benh_them.php" method="post">
+					<form action="phieukham_them.php" method="post">
 					  <div class="form-group">
-						<label for="mabenh">Mã bệnh</label>
-						<input type="text" class="form-control" id="mabenh" name="mabenh">
+						<label for="maphieu">Mã phiếu</label>
+						<input type="text" class="form-control" id="maphieu" name="maphieu">
 					  </div>
 					  
+					  <div class="form-group">
+						<label for="mabenhnhan">Mã bệnh nhân</label>
+						<input type="text" class="form-control" id="mabenhnhan" name="mabenhnhan">
+					  </div>
+					  
+					  <div class="form-group">
+						<label for="manhanvien">Mã nhân viên</label>
+						<input type="text" class="form-control" id="manhanvien" name="manhanvien">
+					  </div>
 					  <div class="form-group">
 						<label for="tenbenh">Tên bệnh</label>
 						<input type="text" class="form-control" id="tenbenh" name="tenbenh">
 					  </div>
 					  
 					  <div class="form-group">
-						<label for="makhoa">Mã khoa</label>
-						<input type="text" class="form-control" id="makhoa" name="makhoa">
+						<label for="tongtien">Tổng tiền</label>
+						<input type="text" class="form-control" id="tongtien" name="tongtien">
 					  </div>
 					  
 					  <button type="submit" class="btn btn-success">Thêm Mới</button>
@@ -44,18 +53,21 @@
 		
 		<?php include "javascript.php"; ?>
 		<?php
-		if(isset ($_POST['mabenh']))
+		if(isset ($_POST['maphieu']))
 		{
 			?>
 		<script>
-			db.collection("BENH").add({
-				mabenh: "<?php echo $_POST['mabenh'];?>",
+			db.collection("PHIEUKHAM").add({
+				maphieu: "<?php echo $_POST['maphieu'];?>",
+				mabenhnhan: "<?php echo $_POST['mabenhnhan'];?>",
+				manhanvien: "<?php echo $_POST['manhanvien'];?>",
 				tenbenh: "<?php echo $_POST['tenbenh'];?>",
-				makhoa: "<?php echo $_POST['makhoa'];?>"
+				tongtien: "<?php echo $_POST['tongtien'];?>",
+				
 			})
 			.then((docRef) => {
 				///console.log("Document written with ID: ", docRef.id);
-				location.href="benh.php";
+				location.href="phieukham.php";
 			})
 			.catch((error) => {
 				console.error("Error adding document: ", error);

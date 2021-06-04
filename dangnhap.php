@@ -43,7 +43,7 @@
      </div>
     </div>
     <div class="col-xs-6">
-     <p class="lead" align="center"> Đăng ký </p>
+     <p class="lead" align="center">TRANG WEB QUẢN LÝ BỆNH NHÂN </p>
      <ul class="list-unstyled" style="line-height: 2">
         <li><span class="fa fa-check text-success"></span> Bền vững – Tận tâm – Hiệu quả
         </li>
@@ -52,10 +52,7 @@
         
         <li><span class="fa fa-check text-success"></span> Đỉnh cao chất lượng - Chuẩn mực yêu thương
         </li>
-        
      </ul>
-     <p><a href="dangky.php" class="btn btn-info btn-block">Đăng ký thành viên!</a>
-     </p>
     </div>
    </div>
   </div>

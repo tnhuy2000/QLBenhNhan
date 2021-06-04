@@ -30,12 +30,7 @@
 							<label for="tennhanvien">Tên nhân viên</label>
 							<input type="text" class="form-control" id="tennhanvien" name="tennhanvien">
 						</div>
-						  
-						<div class="form-group">
-							<label for="makhoa">Mã Khoa</label>
-							<input type="text" class="form-control" id="makhoa" name="makhoa">
-						</div>
-						  
+						
 						<div class="form-group">
 							<label for="diachi">Địa chỉ</label>
 							<input type="text" class="form-control" id="diachi" name="diachi">
@@ -73,7 +68,6 @@
 				$('#id').val(doc.id);
 				$('#manhanvien').val(doc.data().manhanvien);
 				$('#tennhanvien').val(doc.data().tennhanvien);
-				$('#makhoa').val(doc.data().makhoa);
 				$('#diachi').val(doc.data().diachi);
 				$('#ngaysinh').val(doc.data().ngaysinh);
 				$('#dienthoai').val(doc.data().dienthoai);
@@ -99,7 +93,6 @@
 		washingtonRef.update({
 				manhanvien: "<?php echo $_POST['manhanvien'];?>",
 				tennhanvien: "<?php echo $_POST['tennhanvien'];?>",
-				makhoa: "<?php echo $_POST['makhoa'];?>",
 				diachi: "<?php echo $_POST['diachi'];?>",
 				ngaysinh: "<?php echo $_POST['ngaysinh'];?>",
 				dienthoai: "<?php echo $_POST['dienthoai'];?>"
