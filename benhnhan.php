@@ -19,13 +19,13 @@
 				<h5 class="card-header">Bệnh nhân</h5>
 				<div class="card-body">
 				
-				<a href="giangvien_them.php" class ="btn btn-primary mb-2">Thêm Mới</a>
+				<a href="benhnhan_them.php" style="float: right" class ="btn btn-outline-success mb-2"><i class="fa fa-plus-square"></i> Thêm Mới</a>
 					<table class="table table-bordered table-hover table-sm">
 						  <thead>
 							<tr>
 							  <th scope="col">#</th>
 							  <th scope="col">Mã bệnh nhân</th>
-							  <th scope="col">Họ Tên</th>
+							  <th scope="col">Tên bệnh nhân</th>
 							  <th scope="col">Mã phòng</th>
 							  <th scope="col">Mã bệnh</th>
 							  <th scope="col">Mã bảo hiểm</th>
@@ -66,8 +66,8 @@
 					output+='<td>'+doc.data().diachi+'</td>';
 					output+='<td>'+dt+'</td>';
 					output+='<td>'+doc.data().dienthoai+'</td>';
-					output+='<td><a href="benhnhan_sua.php?id='+doc.id+'">Sửa</a></td>';
-					output+='<td><a onclick="return confirm(\'Bạn có muốn xóa bệnh nhân '+doc.data().tenbenhnhan+' không ???\')" href="benhnhan_xoa.php?id='+doc.id+'">Xóa</a></td>';
+					output+='<td class="text-center"><a href="benhnhan_sua.php?id='+doc.id+'"><i class="fa fa-pencil"></i></a></td>';
+					output+='<td class="text-center"><a onclick="return confirm(\'Bạn có muốn xóa bệnh nhân '+doc.data().tenbenhnhan+' không ???\')" href="benhnhan_xoa.php?id='+doc.id+'"><i class="fa fa-minus-square text-danger"></i></a></td>';
 				output+='</tr>';
 				stt++;
 			});

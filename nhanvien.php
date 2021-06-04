@@ -19,13 +19,13 @@
 				<h5 class="card-header">Nhân viên</h5>
 				<div class="card-body">
 				
-				<a href="giangvien_them.php" class ="btn btn-primary mb-2">Thêm Mới</a>
-					<table class="table table-bordered table-hover table-sm">
+				<a href="nhanvien_them.php" style="float: right" class ="btn btn-outline-success mb-2"><i class="fa fa-plus-square"></i> Thêm Mới</a>
+					<table class="table  table-bordered table-hover table-sm">
 						  <thead>
 							<tr>
 							  <th scope="col">#</th>
 							  <th scope="col">Mã nhân viên</th>
-							  <th scope="col">Họ Tên</th>
+							  <th scope="col">Tên nhân viên</th>
 							  <th scope="col">Mã Khoa</th>
 							  <th scope="col">Địa Chỉ</th>
 							  <th scope="col">Ngày Sinh</th>
@@ -45,12 +45,13 @@
 		
 		<?php include "javascript.php"; ?>
 		<script>
-		//var league = db.collection("BENHNHAN").doc('mabenhnhan').get().data().maphong.get().data();
+		
 		db.collection("NHANVIEN").get().then((querySnapshot) => {
 			var stt = 1;
 			var output = "";
 			
 			querySnapshot.forEach((doc) => {
+				
 				//chuyển đổi timestamp sang date
 				var date = new Date(doc.data().ngaysinh*1000);
 				var dt = formatDate(date) + ' ';
@@ -62,8 +63,8 @@
 					output+='<td>'+doc.data().diachi+'</td>';
 					output+='<td>'+dt+'</td>';
 					output+='<td>'+doc.data().dienthoai+'</td>';
-					output+='<td><a href="nhanvien_sua.php?id='+doc.id+'"><i class="fad fa-edit"></i></a></td>';
-					output+='<td><a onclick="return confirm(\'Bạn có muốn xóa nhân viên '+doc.data().tenbenhnhan+' không ???\')" href="giangvien_xoa.php?id='+doc.id+'"><i class="fad fa-trash-alt text-danger"></a></td>';
+					output+='<td class="text-center"><a href="nhanvien_sua.php?id='+doc.id+'"><i class="fa fa-pencil"></i></a></td>';
+					output+='<td class="text-center"><a onclick="return confirm(\'Bạn có muốn xóa nhân viên '+doc.data().tenbenhnhan+' không ???\')" href="nhanvien_xoa.php?id='+doc.id+'"><i class="fa fa-minus-square text-danger"></i></a></td>';
 				output+='</tr>';
 				stt++;
 			});

@@ -15,13 +15,16 @@
 			<li class="nav-item active"><a class="nav-link" href="donthuoc.php"><i class="fa fa-th-list" aria-hidden="true"></i> Đơn thuốc</a></li>
 			<li class="nav-item dropdown">
 				<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-					<i class="fal fa-cog"></i> Danh mục
+					<i class="fa fa-cogs"></i> Danh mục
 				</a>
 				<div class="dropdown-menu" aria-labelledby="navbarDropdown">
 					<a class="dropdown-item" href="nhanvien.php"><i class="fa fa-user-md" aria-hidden="true"></i> Nhân viên</a>
 					<a class="dropdown-item" href="benhnhan.php"><i class="fa fa-wheelchair" aria-hidden="true"></i> Bệnh nhân</a>
-					<a class="dropdown-item" href="phong.php"><i class="fa fa-university" aria-hidden="true"></i> Phòng</a>
-					<a class="dropdown-item" href="thuoc.php"><i class="fa fa-university" aria-hidden="true"></i> Thuốc</a>
+					<a class="dropdown-item" href="taikhoan.php"><i class="fa fa-user-circle" aria-hidden="true"></i> Người dùng</a>
+					<a class="dropdown-item" href="khoa.php"><i class="fa fa-university" aria-hidden="true"></i> Khoa</a>
+					<a class="dropdown-item" href="phong.php"><i class="fa fa-home" aria-hidden="true"></i> Phòng</a>
+					<a class="dropdown-item" href="thuoc.php"><i class="fa fa-medkit" aria-hidden="true"></i> Thuốc</a>
+					<a class="dropdown-item" href="benh.php"><i class="fa fa-heart" aria-hidden="true"></i> Bệnh</a>
 				</div>
 			</li>
 		</ul>
