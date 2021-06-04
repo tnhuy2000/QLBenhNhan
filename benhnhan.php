@@ -19,13 +19,13 @@
 				<h5 class="card-header">Bệnh nhân</h5>
 				<div class="card-body">
 				
-				<a href="benhnhan_them.php" style="float: right" class ="btn btn-outline-success mb-2"><i class="fa fa-plus-square"></i> Thêm Mới</a>
+				<a href="giangvien_them.php" class ="btn btn-primary mb-2">Thêm Mới</a>
 					<table class="table table-bordered table-hover table-sm">
 						  <thead>
 							<tr>
 							  <th scope="col">#</th>
 							  <th scope="col">Mã bệnh nhân</th>
-							  <th scope="col">Tên bệnh nhân</th>
+							  <th scope="col">Họ Tên</th>
 							  <th scope="col">Mã phòng</th>
 							  <th scope="col">Mã bệnh</th>
 							  <th scope="col">Mã bảo hiểm</th>
@@ -54,8 +54,6 @@
 			
 			querySnapshot.forEach((doc) => {
 				//chuyển đổi timestamp sang date
-				var date = new Date(doc.data().ngaysinh*1000);
-				var dt = formatDate(date) + ' ';
 				output+='<tr>';
 					output+='<th scope="row">'+stt+'</th>';
 					output+='<td>'+doc.data().mabenhnhan+'</td>';
@@ -64,21 +62,15 @@
 					output+='<td>'+doc.data().mabenh+'</td>';
 					output+='<td>'+doc.data().mabaohiem+'</td>';
 					output+='<td>'+doc.data().diachi+'</td>';
-					output+='<td>'+dt+'</td>';
+					output+='<td>'+doc.data().ngaysinh+'</td>';
 					output+='<td>'+doc.data().dienthoai+'</td>';
-					output+='<td class="text-center"><a href="benhnhan_sua.php?id='+doc.id+'"><i class="fa fa-pencil"></i></a></td>';
-					output+='<td class="text-center"><a onclick="return confirm(\'Bạn có muốn xóa bệnh nhân '+doc.data().tenbenhnhan+' không ???\')" href="benhnhan_xoa.php?id='+doc.id+'"><i class="fa fa-minus-square text-danger"></i></a></td>';
+					output+='<td><a href="benhnhan_sua.php?id='+doc.id+'">Sửa</a></td>';
+					output+='<td><a onclick="return confirm(\'Bạn có muốn xóa bệnh nhân '+doc.data().tenbenhnhan+' không ???\')" href="benhnhan_xoa.php?id='+doc.id+'">Xóa</a></td>';
 				output+='</tr>';
 				stt++;
 			});
 			$('#HienThi').html(output);
 		});
-		function formatDate(date){
-			var year = (date.getFullYear() - 1969).toString();
-			var month = (date.getMonth() + 101).toString().substring(1);
-			var day = (date.getDate() + 100).toString().substring(1);
-			return day + '/' + month + '/' + year;
-		}
 		</script>
 	</body>
 </html>
