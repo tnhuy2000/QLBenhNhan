@@ -49,16 +49,18 @@
 		db.collection("NHANVIEN").get().then((querySnapshot) => {
 			var stt = 1;
 			var output = "";
-			var ngaysinh = doc.data().ngaysinh.get.date();
 			querySnapshot.forEach((doc) => {
-				
+				//chuyển đồi timestamp sang date
+				var date = new Date(doc.data().ngaysinh * 1000);
+				var dt = formatDate(date) + ' ';
+				//lấy dữ liệu từ khóa ngoại
 				output+='<tr>';
 					output+='<th scope="row">'+stt+'</th>';
 					output+='<td>'+doc.data().manhanvien+'</td>';
 					output+='<td>'+doc.data().tennhanvien+'</td>';
 					output+='<td>'+doc.data().makhoa+'</td>';
 					output+='<td>'+doc.data().diachi+'</td>';
-					output+='<td>'+doc.data().ngaysinh+'</td>';
+					output+='<td>'+dt+'</td>';
 					output+='<td>'+doc.data().dienthoai+'</td>';
 					output+='<td><a href="giangvien_sua.php?id='+doc.id+'">Sửa</a></td>';
 					output+='<td><a onclick="return confirm(\'Bạn có muốn xóa nhân viên '+doc.data().tenbenhnhan+' không ???\')" href="giangvien_xoa.php?id='+doc.id+'">Xóa</a></td>';
@@ -67,6 +69,13 @@
 			});
 			$('#HienThi').html(output);
 		});
+		function formatDate(date) {
+			var year = (date.getFullYear()- 1969).toString();
+			var month = (date.getMonth() + 101).toString().substring(1);
+			var day = (date.getDate() + 100).toString().substring(1);
+			return day + '/' + month + '/' + year;
+		}
+
 		</script>
 	</body>
 </html>
