@@ -62,8 +62,8 @@
 					output+='<td>'+doc.data().diachi+'</td>';
 					output+='<td>'+dt+'</td>';
 					output+='<td>'+doc.data().dienthoai+'</td>';
-					output+='<td><a href="nhanvien_sua.php?id='+doc.id+'">Sửa</a></td>';
-					output+='<td><a onclick="return confirm(\'Bạn có muốn xóa nhân viên '+doc.data().tenbenhnhan+' không ???\')" href="giangvien_xoa.php?id='+doc.id+'">Xóa</a></td>';
+					output+='<td><a href="nhanvien_sua.php?id='+doc.id+'"><i class="fad fa-edit"></i></a></td>';
+					output+='<td><a onclick="return confirm(\'Bạn có muốn xóa nhân viên '+doc.data().tenbenhnhan+' không ???\')" href="giangvien_xoa.php?id='+doc.id+'"><i class="fad fa-trash-alt text-danger"></a></td>';
 				output+='</tr>';
 				stt++;
 			});
