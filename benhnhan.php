@@ -9,7 +9,7 @@
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" />
 		<link rel="stylesheet" href="css/all.min.css" />
 		
-		<title>Giảng viên</title>
+		<title>Bệnh Nhân</title>
 	</head>
 	<body>
 		<div class="container">
@@ -65,7 +65,7 @@
 					output+='<td>'+doc.data().ngaysinh+'</td>';
 					output+='<td>'+doc.data().dienthoai+'</td>';
 					output+='<td><a href="giangvien_sua.php?id='+doc.id+'">Sửa</a></td>';
-					output+='<td><a onclick="return confirm(\'Bạn có muốn xóa giảng viên '+doc.data().tenbenhnhan+' không ???\')" href="giangvien_xoa.php?id='+doc.id+'">Xóa</a></td>';
+					output+='<td><a onclick="return confirm(\'Bạn có muốn xóa bệnh nhân '+doc.data().tenbenhnhan+' không ???\')" href="giangvien_xoa.php?id='+doc.id+'">Xóa</a></td>';
 				output+='</tr>';
 				stt++;
 			});
