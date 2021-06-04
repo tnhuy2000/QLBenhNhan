@@ -9,7 +9,7 @@
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" />
 		<link rel="stylesheet" href="css/all.min.css" />
 		
-		<title>Bệnh Nhân</title>
+		<title>Bác Sĩ</title>
 	</head>
 	<body>
 		<div class="container">
@@ -24,14 +24,12 @@
 						  <thead>
 							<tr>
 							  <th scope="col">#</th>
-							  <th scope="col">Mã bệnh nhân</th>
+							  <th scope="col">Mã nhân viên</th>
 							  <th scope="col">Họ Tên</th>
-							  <th scope="col">Mã phòng</th>
-							  <th scope="col">Mã bệnh</th>
-							  <th scope="col">Mã bảo hiểm</th>
-							  <th scope="col">Địa chỉ</th>
-							  <th scope="col">Ngày sinh</th>
-							  <th scope="col">Điện thoại</th>
+							  <th scope="col">Mã Khoa</th>
+							  <th scope="col">Địa Chỉ</th>
+							  <th scope="col">Ngày Sinh</th>
+							  <th scope="col">Điện Thoại</th>
 							  <th scope="col">Sửa</th>
 							  <th scope="col">Xóa</th>
 							</tr>
@@ -48,7 +46,7 @@
 		<?php include "javascript.php"; ?>
 		<script>
 		//var league = db.collection("BENHNHAN").doc('mabenhnhan').get().data().maphong.get().data();
-		db.collection("BENHNHAN").get().then((querySnapshot) => {
+		db.collection("NHANVIEN").get().then((querySnapshot) => {
 			var stt = 1;
 			var output = "";
 			
@@ -58,16 +56,14 @@
 				var dt = formatDate(date) + ' ';
 				output+='<tr>';
 					output+='<th scope="row">'+stt+'</th>';
-					output+='<td>'+doc.data().mabenhnhan+'</td>';
-					output+='<td>'+doc.data().tenbenhnhan+'</td>';
-					output+='<td>'+doc.data().maphong+'</td>';
-					output+='<td>'+doc.data().mabenh+'</td>';
-					output+='<td>'+doc.data().mabaohiem+'</td>';
+					output+='<td>'+doc.data().manhanvien+'</td>';
+					output+='<td>'+doc.data().tennhanvien+'</td>';
+					output+='<td>'+doc.data().makhoa+'</td>';
 					output+='<td>'+doc.data().diachi+'</td>';
 					output+='<td>'+dt+'</td>';
 					output+='<td>'+doc.data().dienthoai+'</td>';
-					output+='<td><a href="benhnhan_sua.php?id='+doc.id+'">Sửa</a></td>';
-					output+='<td><a onclick="return confirm(\'Bạn có muốn xóa bệnh nhân '+doc.data().tenbenhnhan+' không ???\')" href="benhnhan_xoa.php?id='+doc.id+'">Xóa</a></td>';
+					output+='<td><a href="nhanvien_sua.php?id='+doc.id+'">Sửa</a></td>';
+					output+='<td><a onclick="return confirm(\'Bạn có muốn xóa nhân viên '+doc.data().tenbenhnhan+' không ???\')" href="giangvien_xoa.php?id='+doc.id+'">Xóa</a></td>';
 				output+='</tr>';
 				stt++;
 			});

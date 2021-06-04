@@ -18,7 +18,7 @@
 					<i class="fal fa-cog"></i> Danh mục
 				</a>
 				<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-					<a class="dropdown-item" href="bacsi.php"><i class="fa fa-user-md" aria-hidden="true"></i> Bác sĩ</a>
+					<a class="dropdown-item" href="nhanvien.php"><i class="fa fa-user-md" aria-hidden="true"></i> Nhân viên</a>
 					<a class="dropdown-item" href="benhnhan.php"><i class="fa fa-wheelchair" aria-hidden="true"></i> Bệnh nhân</a>
 					<a class="dropdown-item" href="phong.php"><i class="fa fa-university" aria-hidden="true"></i> Phòng</a>
 					<a class="dropdown-item" href="thuoc.php"><i class="fa fa-university" aria-hidden="true"></i> Thuốc</a>
