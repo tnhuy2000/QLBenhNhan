@@ -49,11 +49,19 @@
 		db.collection("NHANVIEN").get().then((querySnapshot) => {
 			var stt = 1;
 			var output = "";
+<<<<<<< HEAD:nhanvien_sua.php
 			
 			querySnapshot.forEach((doc) => {
 				//chuyển đổi timestamp sang date
 				var date = new Date(doc.data().ngaysinh*1000);
 				var dt = formatDate(date) + ' ';
+=======
+			querySnapshot.forEach((doc) => {
+				//chuyển đồi timestamp sang date
+				var date = new Date(doc.data().ngaysinh * 1000);
+				var dt = formatDate(date) + ' ';
+				//lấy dữ liệu từ khóa ngoại
+>>>>>>> af8602330f34f4f3ce77b23d0d87b247e12be8a7:bacsi.php
 				output+='<tr>';
 					output+='<th scope="row">'+stt+'</th>';
 					output+='<td>'+doc.data().manhanvien+'</td>';
@@ -69,12 +77,21 @@
 			});
 			$('#HienThi').html(output);
 		});
+<<<<<<< HEAD:nhanvien_sua.php
 		function formatDate(date){
 			var year = (date.getFullYear() - 1969).toString();
+=======
+		function formatDate(date) {
+			var year = (date.getFullYear()- 1969).toString();
+>>>>>>> af8602330f34f4f3ce77b23d0d87b247e12be8a7:bacsi.php
 			var month = (date.getMonth() + 101).toString().substring(1);
 			var day = (date.getDate() + 100).toString().substring(1);
 			return day + '/' + month + '/' + year;
 		}
+<<<<<<< HEAD:nhanvien_sua.php
+=======
+
+>>>>>>> af8602330f34f4f3ce77b23d0d87b247e12be8a7:bacsi.php
 		</script>
 	</body>
 </html>
