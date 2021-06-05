@@ -1,16 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<!-- Required meta tags -->
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-		
-		<!-- Bootstrap CSS -->
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" />
-		<link rel="stylesheet" href="css/all.min.css" />
-		
-		<title>Bệnh Nhân</title>
-	</head>
+	<?php include "header.php"; ?>
 	<body>
 		<div class="container">
 			<?php include "navbar.php"; ?>
@@ -20,23 +10,23 @@
 				<div class="card-body">
 				
 				<a href="benhnhan_them.php" style="float: right" class ="btn btn-outline-success mb-2"><i class="fa fa-plus-square"></i> Thêm Mới</a>
-					<table class="table table-bordered table-hover table-sm">
+					<table id="PhanTrang" class="table table-bordered table-hover table-sm mb-0">
 						  <thead>
-							<tr>
-							  <th scope="col">#</th>
-							  <th scope="col">Mã bệnh nhân</th>
-							  <th scope="col">Tên bệnh nhân</th>
-							  <th scope="col">Mã bảo hiểm</th>
-							  <th scope="col">Địa chỉ</th>
-							  <th scope="col">Ngày sinh</th>
-							  <th scope="col">Điện thoại</th>
-							  <th scope="col">Sửa</th>
-							  <th scope="col">Xóa</th>
-							</tr>
+								<tr>
+								  <th scope="col">#</th>
+								  <th scope="col">Mã bệnh nhân</th>
+								  <th scope="col">Tên bệnh nhân</th>
+								  <th scope="col">Mã bảo hiểm</th>
+								  <th scope="col">Địa chỉ</th>
+								  <th scope="col">Ngày sinh</th>
+								  <th scope="col">Điện thoại</th>
+								  <th scope="col">Sửa</th>
+								  <th scope="col">Xóa</th>
+								</tr>
 						  </thead>
 						  <tbody id="HienThi">
 						  </tbody>
-						</table>
+					</table>
 				</div>
 			</div>
 			
@@ -44,6 +34,7 @@
 		</div>
 		
 		<?php include "javascript.php"; ?>
+		
 		<script>
 		//var league = db.collection("BENHNHAN").doc('mabenhnhan').get().data().maphong.get().data();
 		db.collection("BENHNHAN").get().then((querySnapshot) => {
@@ -70,5 +61,6 @@
 		});
 		
 		</script>
+		
 	</body>
 </html>

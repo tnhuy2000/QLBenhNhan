@@ -1,16 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<!-- Required meta tags -->
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-		
-		<!-- Bootstrap CSS -->
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" />
-		<link rel="stylesheet" href="css/all.min.css" />
-		
-		<title>Nhân viên</title>
-	</head>
+	<?php include "header.php"; ?>
 	<body>
 		<div class="container">
 			<?php include "navbar.php"; ?>
@@ -20,7 +10,7 @@
 				<div class="card-body">
 				
 				<a href="nhanvien_them.php" style="float: right" class ="btn btn-outline-success mb-2"><i class="fa fa-plus-square"></i> Thêm Mới</a>
-					<table class="table  table-bordered table-hover table-sm">
+					<table id="PhanTrang" class="table  table-bordered table-hover table-sm " style="width:100%">
 						  <thead>
 							<tr>
 							  <th scope="col">#</th>
@@ -43,6 +33,7 @@
 		</div>
 		
 		<?php include "javascript.php"; ?>
+		
 		<script>
 		
 		db.collection("NHANVIEN").get().then((querySnapshot) => {
