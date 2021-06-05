@@ -59,8 +59,8 @@
 		<script>
 			db.collection("PHIEUKHAM").add({
 				maphieu: "<?php echo $_POST['maphieu'];?>",
-				mabenhnhan: "<?php echo $_POST['mabenhnhan'];?>",
-				manhanvien: "<?php echo $_POST['manhanvien'];?>",
+				mabenhnhan: db.doc("BENHNHAN/<?php echo $_POST['mabenhnhan'];?>")
+				manhanvien: db.doc("NHANVIEN/<?php echo $_POST['manhanvien'];?>")
 				tenbenh: "<?php echo $_POST['tenbenh'];?>",
 				tongtien: "<?php echo $_POST['tongtien'];?>",
 				

@@ -44,14 +44,15 @@
 		</div>
 		
 		<?php include "javascript.php"; ?>
+		
 		<script>
 		
-		db.collection("PHIEUKHAM").get().then((querySnapshot) => {
-			var stt = 1;
-			var output = "";
+		
 			
-			querySnapshot.forEach((doc) => {
-				
+			db.collection("PHIEUKHAM").get().then((querySnapshot)=> {
+				var stt = 1;
+				var output = "";
+			  querySnapshot.forEach((doc)=>{
 				
 				output+='<tr>';
 					output+='<th scope="row">'+stt+'</th>';
@@ -65,9 +66,11 @@
 					output+='<td class="text-center"><a onclick="return confirm(\'Bạn có muốn xóa phiếu '+doc.data().maphieu+' không ???\')" href="phieukham_xoa.php?id='+doc.id+'"><i class="fa fa-minus-square text-danger"></i></a></td>';
 				output+='</tr>';
 				stt++;
+				});
+				$('#HienThi').html(output);
+			
 			});
-			$('#HienThi').html(output);
-		});
+		
 		
 		</script>
 	</body>

@@ -20,32 +20,30 @@
 				<div class="card-body">
 					<form action="nhanvien_sua.php" method="post">
 						<input type="text" id="id" name="id" hidden />
-						
-						<div class="form-group">
-							<label for="manhanvien">Mã nhân viên</label>
-							<input type="text" class="form-control" id="manhanvien" name="manhanvien">
+						<div class="form-row">
+							<div class="form-group col-md-6">
+								<label for="manhanvien">Mã nhân viên</label>
+								<input type="text" class="form-control" id="manhanvien" name="manhanvien">
+							</div>
+							<div class="form-group col-md-6">
+								<label for="tennhanvien">Tên nhân viên</label>
+								<input type="text" class="form-control" id="tennhanvien" name="tennhanvien">
+							</div>
 						</div>
-					  
-						<div class="form-group">
-							<label for="tennhanvien">Tên nhân viên</label>
-							<input type="text" class="form-control" id="tennhanvien" name="tennhanvien">
-						</div>
-						
 						<div class="form-group">
 							<label for="diachi">Địa chỉ</label>
 							<input type="text" class="form-control" id="diachi" name="diachi">
 						</div>
-						  
-						<div class="form-group">
-							<label for="ngaysinh">Ngày sinh</label>
-							<input type="text" class="form-control" id="ngaysinh" name="ngaysinh">
+						<div class="form-row">
+							<div class="form-group col-md-6">
+								<label for="ngaysinh">Ngày sinh</label>
+								<input type="text" class="form-control" id="ngaysinh" name="ngaysinh">
+							</div>
+							<div class="form-group col-md-6">
+								<label for="dienthoai">Điện thoại</label>
+								<input type="text" class="form-control" id="dienthoai" name="dienthoai">
+							</div>
 						</div>
-						  
-						<div class="form-group">
-							<label for="dienthoai">Điện thoại</label>
-							<input type="text" class="form-control" id="dienthoai" name="dienthoai">
-						</div>
-						
 						<button type="submit" class="btn btn-info">Cập nhật</button>
 					</form>
 				</div>

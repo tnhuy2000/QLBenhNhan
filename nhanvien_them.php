@@ -19,30 +19,30 @@
 				<h5 class="card-header">Thêm nhân viên</h5>
 				<div class="card-body">
 					<form action="nhanvien_them.php" method="post">
-					  <div class="form-group">
-						<label for="manhanvien">Mã nhân viên</label>
-						<input type="text" class="form-control" id="manhanvien" name="manhanvien">
-					  </div>
-					  
-					  <div class="form-group">
-						<label for="tennhanvien">Tên nhân viên</label>
-						<input type="text" class="form-control" id="tennhanvien" name="tennhanvien">
-					  </div>
-					  
-					  <div class="form-group">
-						<label for="diachi">Địa chỉ</label>
-						<input type="text" class="form-control" id="diachi" name="diachi">
-					  </div>
-					  
-					  <div class="form-group">
-						<label for="ngaysinh">Ngày sinh</label>
-						<input type="text" class="form-control" id="ngaysinh" name="ngaysinh">
-					  </div>
-					  
-					  <div class="form-group">
-						<label for="dienthoai">Điện thoại</label>
-						<input type="text" class="form-control" id="dienthoai" name="dienthoai">
-					  </div>
+						<div class="form-row">
+							<div class="form-group col-md-6">
+								<label for="manhanvien">Mã nhân viên</label>
+								<input type="text" class="form-control" id="manhanvien" name="manhanvien">
+							</div>
+							<div class="form-group col-md-6">
+								<label for="tennhanvien">Tên nhân viên</label>
+								<input type="text" class="form-control" id="tennhanvien" name="tennhanvien">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="diachi">Địa chỉ</label>
+							<input type="text" class="form-control" id="diachi" name="diachi">
+						</div>
+						<div class="form-row">
+							<div class="form-group col-md-6">
+								<label for="ngaysinh">Ngày sinh</label>
+								<input type="text" class="form-control" id="ngaysinh" name="ngaysinh">
+							</div>
+							<div class="form-group col-md-6">
+								<label for="dienthoai">Điện thoại</label>
+								<input type="text" class="form-control" id="dienthoai" name="dienthoai">
+							</div>
+						</div>
 					  
 					  <button type="submit" class="btn btn-success">Thêm Mới</button>
 					</form>
