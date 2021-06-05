@@ -13,13 +13,13 @@
 			  </ol>
 			  <div class="carousel-inner">
 				<div class="carousel-item active">
-				  <img src="images/s3.jpg" class="d-block w-100" alt="...">
+				  <img src="images/banner2.jpg" class="d-block w-100" alt="...">
 				</div>
 				<div class="carousel-item">
-				  <img src="images/slide3.jpg" class="d-block w-100" alt="...">
+				  <img src="images/banner5.jpg" class="d-block w-100" alt="...">
 				</div>
 				<div class="carousel-item">
-				  <img src="images/s1.jpg" class="d-block w-100" alt="...">
+				  <img src="images/banner6.jpg" class="d-block w-100" alt="...">
 				</div>
 			  </div>
 			  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -36,7 +36,7 @@
 				<div class="card-header" id="headingOne">
 				  <h5 class="mb-0">
 					<button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-					  Giới thiệu
+					  GIỚI THIỆU
 					</button>
 				  </h5>
 				</div>
@@ -48,7 +48,7 @@
 					<p>- Thực hiện bệnh án điện tử</p>
 					<p>- Quản lý chặt chẽ thông tin bệnh nhân và thông tin bệnh án của bệnh nhân.</p>
 					<p>- Tự động tổng hợp số liệu sử dụng cho bệnh nhân để lập phiếu thanh toán tiền đảm bảo số liệu chính xác, đầy đủ, chống thất thu.</p>
-
+					<p>- Tạo sự chuyên nghiệp trong quản lý bệnh nhân và tiết kiệm thời gian chờ của bệnh nhân và chi phí trong quá trình hoạt động.
 				  </div>
 				</div>
 			  </div>
@@ -56,7 +56,7 @@
 				<div class="card-header" id="headingTwo">
 				  <h5 class="mb-0">
 					<button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-					  Thành viên
+					  THÀNH VIÊN SÁNG LẬP
 					</button>
 				  </h5>
 				</div>
@@ -68,7 +68,25 @@
 				  </div>
 				</div>
 			  </div>
+				
 			  
+			</div>
+			<div class="card">
+			  <div class="card-body">
+				<h5 class="card-title">CỞ SỞ VẬT CHẤT</h5>
+				<p class="card-text">Cơ sở vật chất khang trang cùng với trang thiết bị hiện đại tạo nên sự chuyên nghiệp cho đội ngũ y bác sĩ.</p>
+				<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+			  </div>
+			  <img class="card-img-bottom" src="images/banner1.png" alt="Card image cap">
+			</div>
+			
+			<div class="card">
+			  <div class="card-body">
+				<h5 class="card-title">ĐỘI NGŨ Y BÁC SĨ</h5>
+				<p class="card-text">Đội ngũ y bác sĩ thân thiện, nhiệt tình, chu đáo. Đặc biệt, các y bác sĩ điều có chuyên môn cao mang đến cho bệnh nhân sự yên tâm tuyệt đối.</p>
+				<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+			  </div>
+			  <img class="card-img-bottom" src="images/banner5.png" alt="Card image cap">
 			</div>
 			
 			<?php include "footer.php"; ?>

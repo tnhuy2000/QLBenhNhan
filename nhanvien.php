@@ -6,7 +6,7 @@
 			<?php include "navbar.php"; ?>
 			
 			<div class="card mt-3">
-				<h5 class="card-header">Nhân viên</h5>
+				<h5 class="card-header " >Nhân viên</h5>
 				<div class="card-body">
 				
 				<a href="nhanvien_them.php" style="float: right" class ="btn btn-outline-success mb-2"><i class="fa fa-plus-square"></i> Thêm Mới</a>
