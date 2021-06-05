@@ -53,10 +53,9 @@
 
 				<div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
 				  <div class="card-body">
-					<p>Phần mềm Quản lý bệnh nhân:</p>
+					<p>Trang web Quản lý bệnh nhân:</p>
 					<p>- Tin học hoá các nghiệp vụ quản lý</p>
 					<p>- Thực hiện bệnh án điện tử</p>
-					<p>- Đáp ứng nghiệp vụ theo từng phòng ban/khoa phòng trong bệnh viện, liên kết số liệu giữa các phòng ban chức năng và phòng tài vụ.</p>
 					<p>- Quản lý chặt chẽ thông tin bệnh nhân và thông tin bệnh án của bệnh nhân.</p>
 					<p>- Tự động tổng hợp số liệu sử dụng cho bệnh nhân để lập phiếu thanh toán tiền đảm bảo số liệu chính xác, đầy đủ, chống thất thu.</p>
 
@@ -83,7 +82,7 @@
 			</div>
 			
 			<?php include "footer.php"; ?>
-		
+		</div>
 		
 		<?php include "javascript.php"; ?>
 	</body>

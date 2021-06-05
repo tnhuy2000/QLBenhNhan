@@ -72,6 +72,8 @@
 			})
 			.then((docRef) => {
 				///console.log("Document written with ID: ", docRef.id);
+				 
+				
 				location.href="benhnhan.php";
 			})
 			.catch((error) => {
