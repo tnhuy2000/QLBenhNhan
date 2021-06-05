@@ -10,40 +10,42 @@
 	</button>
 	
 	<div class="collapse navbar-collapse" id="navbarSupportedContent">
-		<ul class="navbar-nav mr-auto">
-			<?php
-				session_start();
-				if(!isset($_SESSION['uid']))
-				{
-			?>
+		
+		<?php
+			session_start();
+			if(!isset($_SESSION['uid']))
+			{
+		?>	
+				<ul class="navbar-nav ml-auto">
 					<li class="nav-item active">
 						<a class="nav-link" href="dangnhap.php">
 							<i class="fad fa-sign-in-alt"></i> Đăng nhập
 						</a>
 					</li>
-			<?php
-				}
-				else
-				{
-			?>
-				
-					<li class="nav-item">
+				</ul>
+		<?php
+			}
+			else
+			{
+		?>
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item active">
 						<a class="nav-link" href="phieukham.php">
 							<i class="fa fa-list-alt" aria-hidden="true"></i> Phiếu khám
 						</a>
 					</li>
 					
-					<li class="nav-item">
+					<li class="nav-item active">
 						<a class="nav-link" href="donthuoc.php">
 							<i class="fa fa-th-list" aria-hidden="true"></i> Đơn thuốc
 						</a>
 					</li>
-					<li class="nav-item">
+					<li class="nav-item active">
 						<a class="nav-link" href="benhnhan.php">
 								<i class="fa fa-wheelchair" aria-hidden="true"></i> Bệnh nhân
 						</a>
 					</li>
-					<li class="nav-item dropdown">
+					<li class="nav-item active dropdown">
 						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 							<i class="fa fa-cogs"></i> Danh mục
 						</a>
@@ -51,7 +53,6 @@
 							<a class="dropdown-item" href="nhanvien.php">
 								<i class="fa fa-user-md" aria-hidden="true"></i> Nhân viên
 							</a>
-							
 							
 							<a class="dropdown-item" href="thuoc.php">
 								<i class="fa fa-medkit" aria-hidden="true"></i> Thuốc
@@ -61,17 +62,17 @@
 					</li>
 					
 			
-		</ul>
-		<ul class="navbar-nav ml-auto">
-			<li class="nav-item">
-				<a class="nav-link" href="dangxuat.php">
-					<i class="fal fa-user-circle" style="color:yellow"></i> <?php echo $_SESSION['email'] ?>  [Đăng xuất]
-				</a>
-			</li>
-	
-		</ul>
-			<?php
-				}
-			?>
+				</ul>
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item">
+						<a class="nav-link" href="dangxuat.php">
+							<i class="fal fa-user-circle" style="color:yellow"></i> <?php echo $_SESSION['email'] ?>  [Đăng xuất]
+						</a>
+					</li>
+			
+				</ul>
+		<?php
+			}
+		?>
 	</div>
 </nav>
