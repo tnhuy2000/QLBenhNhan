@@ -17,6 +17,7 @@
 							<label for="mabenhnhan">Bệnh nhân</label>
 							<select class="custom-select" id="mabenhnhan" name="mabenhnhan" required>
 								<option value="">-- Chọn --</option>
+								<script>'<option value="'+db.collection("BENHNHAN").get()+'">'+gettenbenhnhan()+'</option>'</script>
 								<option value="DeUwoGhK0NmsKWyyWEog">Bùi Trường Linh</option>
 								<option value="y51MvsAce09XxsB4li1r">Bùi Trường</option>
 								
@@ -66,7 +67,15 @@
 			.catch((error) => {
 				console.error("Error adding document: ", error);
 			});
-
+			async gettenbenhnhan(){
+				const ds = [];
+				await db.collection("BENHNHAN").get().then(querySnapshot =>{
+					querySnapshot.docs.forEach(doc =>{
+					ds.Push(doc.data().tenbenhnhan);
+					});
+				});
+				return ds;
+			}
 		</script>
 		<?php
 		}
