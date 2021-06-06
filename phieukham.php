@@ -9,19 +9,20 @@
 				<h5 class="card-header">Danh sách phiếu khám</h5>
 				<div class="card-body">
 				
-				<a href="phieukham_them.php" style="float: right" class ="btn btn-outline-success mb-2"><i class="fa fa-plus-square"></i> Thêm Mới</a>
+				<a href="phieukham_them.php" class ="btn btn-outline-success mb-2"><i class="fa fa-plus-square"></i> Thêm Mới</a>
 					<table class="table  table-bordered table-hover table-sm">
 						  <thead>
 							<tr>
 							  <th scope="col">#</th>
-							  <th scope="col">Mã phiếu</th>
-							  <th scope="col">Mã bệnh nhân</th>
-							  <th scope="col">Mã nhân viên</th>
-							  <th scope="col">Tên bệnh</th>
-							  <th scope="col">Tổng tiền</th>
+							  <th scope="col" class="text-center">Mã phiếu</th>
+							  <th scope="col" class="text-center">Mã bệnh nhân</th>
+							  <th scope="col" class="text-center">Mã nhân viên</th>
+							  <th scope="col" class="text-center">Tên bệnh</th>
+							  <th scope="col" class="text-center">Ngày khám</th>
+							  <th scope="col" class="text-center">Tổng tiền</th>
 							  
-							  <th scope="col">Sửa</th>
-							  <th scope="col">Xóa</th>
+							  <th scope="col" class="text-center">Sửa</th>
+							  <th scope="col" class="text-center">Xóa</th>
 							</tr>
 						  </thead>
 						  <tbody id="HienThi">
@@ -36,8 +37,7 @@
 		<?php include "javascript.php"; ?>
 		
 		<script>
-		
-		
+			
 			
 			db.collection("PHIEUKHAM").get().then((querySnapshot)=> {
 				var stt = 1;
@@ -50,6 +50,7 @@
 					output+='<td>'+doc.data().mabenhnhan+'</td>';
 					output+='<td>'+doc.data().manhanvien+'</td>';
 					output+='<td>'+doc.data().tenbenh+'</td>';
+					output+='<td>'+doc.data().ngaykham+'</td>';
 					output+='<td>'+doc.data().tongtien+'</td>';
 					
 					output+='<td class="text-center"><a href="phieukham_sua.php?id='+doc.id+'"><i class="fa fa-pencil"></i></a></td>';

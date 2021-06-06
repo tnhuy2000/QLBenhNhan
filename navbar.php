@@ -11,7 +11,7 @@
 	
 	<div class="collapse navbar-collapse" id="navbarSupportedContent">
 		
-		<?php
+				<?php
 			session_start();
 			if(!isset($_SESSION['uid']))
 			{
@@ -35,11 +35,7 @@
 						</a>
 					</li>
 					
-					<li class="nav-item active">
-						<a class="nav-link" href="donthuoc.php">
-							<i class="fa fa-th-list" aria-hidden="true"></i> Đơn thuốc
-						</a>
-					</li>
+					
 					<li class="nav-item active">
 						<a class="nav-link" href="benhnhan.php">
 								<i class="fa fa-wheelchair" aria-hidden="true"></i> Bệnh nhân
@@ -55,7 +51,7 @@
 							</a>
 							
 							<a class="dropdown-item" href="thuoc.php">
-								<i class="fa fa-medkit" aria-hidden="true"></i> Thuốc
+								<i class="fa fa-medkit" aria-hidden="true"></i> Kho thuốc
 							</a>
 							
 						</div>
@@ -74,5 +70,6 @@
 		<?php
 			}
 		?>
+		
 	</div>
 </nav>

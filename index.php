@@ -86,7 +86,7 @@
 				<p class="card-text">Đội ngũ y bác sĩ thân thiện, nhiệt tình, chu đáo. Đặc biệt, các y bác sĩ điều có chuyên môn cao mang đến cho bệnh nhân sự yên tâm tuyệt đối.</p>
 				<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
 			  </div>
-			  <img class="card-img-bottom" src="images/banner5.png" alt="Card image cap">
+			  <img class="card-img-bottom" src="images/banner7.jpg" alt="Card image cap">
 			</div>
 			
 			<?php include "footer.php"; ?>
