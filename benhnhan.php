@@ -5,7 +5,7 @@
 		<div class="container">
 			<?php include "navbar.php"; ?>
 			
-			<div class="card mt-3">
+			<div class="card  border rounded-left mt-3 " >
 				<h5 class="card-header">Bệnh nhân</h5>
 				<div class="card-body">
 				
@@ -14,12 +14,12 @@
 						  <thead>
 								<tr>
 								  <th scope="col" >#</th>
-								  <th scope="col" width="11%">Mã bệnh nhân</th>
-								  <th scope="col" width="15%">Tên bệnh nhân</th>
-								  <th scope="col" width="8%">Bảo hiểm</th>
-								  <th scope="col">Địa chỉ</th>
-								  <th scope="col" width="9%">Ngày sinh</th>
-								  <th scope="col" width="10%">Điện thoại</th>
+								  <th scope="col" class="text-center" width="11%">Mã bệnh nhân</th>
+								  <th scope="col" class="text-center" width="15%">Tên bệnh nhân</th>
+								  <th scope="col" class="text-center" width="8%">Bảo hiểm</th>
+								  <th scope="col" class="text-center" >Địa chỉ</th>
+								  <th scope="col" class="text-center" width="9%">Ngày sinh</th>
+								  <th scope="col" class="text-center" width="10%">Điện thoại</th>
 								  <th scope="col">Sửa</th>
 								  <th scope="col">Xóa</th>
 								</tr>
@@ -46,10 +46,10 @@
 				
 				output+='<tr>';
 					output+='<th scope="row">'+stt+'</th>';
-					output+='<td class="text-center">'+doc.data().mabenhnhan+'</td>';
+					output+='<td class="text-center"><span class="d-block text-primary">'+doc.data().mabenhnhan+'</td>';
 					output+='<td class="text-center"><span class="d-block text-success">'+doc.data().tenbenhnhan+'</td>';
 					output+='<td class="text-center">'+doc.data().mabaohiem+'</td>';
-					output+='<td class="text-center">'+doc.data().diachi+'</td>';
+					output+='<td >'+doc.data().diachi+'</td>';
 					output+='<td class="text-center">'+doc.data().ngaysinh+'</td>';
 					output+='<td class="text-center">'+doc.data().dienthoai+'</td>';
 					

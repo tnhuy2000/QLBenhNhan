@@ -52,7 +52,7 @@
 				  </div>
 				</div>
 			  </div>
-			  <div class="card">
+			  <div class="card" >
 				<div class="card-header" id="headingTwo">
 				  <h5 class="mb-0">
 					<button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
@@ -77,7 +77,7 @@
 				<p class="card-text">Cơ sở vật chất khang trang cùng với trang thiết bị hiện đại tạo nên sự chuyên nghiệp cho đội ngũ y bác sĩ.</p>
 				<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
 			  </div>
-			  <img class="card-img-bottom" src="images/banner1.png" alt="Card image cap">
+			  <img class="card-img-bottom img-thumbnail" src="images/banner1.png" alt="Card image cap">
 			</div>
 			
 			<div class="card">
@@ -86,7 +86,7 @@
 				<p class="card-text">Đội ngũ y bác sĩ thân thiện, nhiệt tình, chu đáo. Đặc biệt, các y bác sĩ điều có chuyên môn cao mang đến cho bệnh nhân sự yên tâm tuyệt đối.</p>
 				<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
 			  </div>
-			  <img class="card-img-bottom" src="images/banner7.jpg" alt="Card image cap">
+			  <img class="card-img-bottom img-thumbnail" src="images/banner7.jpg" alt="Card image cap">
 			</div>
 			
 			<?php include "footer.php"; ?>

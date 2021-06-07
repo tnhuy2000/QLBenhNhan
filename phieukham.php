@@ -27,7 +27,7 @@
 						  </thead>
 						  <tbody id="HienThi">
 						  </tbody>
-						</table>
+					</table>
 				</div>
 			</div>
 			

@@ -12,7 +12,7 @@
 						<p class="card-text">Đang xử lý đăng nhập....</p>
 						<div class="alert alert-danger alert-dismissible fade show mb-0" role ="alert">
 							<span id="ThongBao"></span>
-							<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+							<button type="button" class="close" data-dismiss="alert-warning" aria-label="Close">
 								<span aria-hidden="true">&times;</span>
 							</button>	
 						</div>

@@ -45,9 +45,9 @@
 								
 				output+='<tr>';
 					output+='<th scope="row">'+stt+'</th>';
-					output+='<td class="text-center">'+doc.data().manhanvien+'</td>';
+					output+='<td class="text-center"><span class="d-block text-primary">'+doc.data().manhanvien+'</td>';
 					output+='<td class="text-center"><span class="d-block text-success">'+doc.data().tennhanvien+'</td>';
-					output+='<td class="text-center">'+doc.data().diachi+'</td>';
+					output+='<td >'+doc.data().diachi+'</td>';
 					output+='<td class="text-center">'+doc.data().ngaysinh+'</td>';
 					output+='<td class="text-center">'+doc.data().dienthoai+'</td>';
 					output+='<td class="text-center"><a href="nhanvien_sua.php?id='+doc.id+'"><i class="fa fa-pencil"></i></a></td>';
