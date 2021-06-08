@@ -43,7 +43,7 @@
 
 				<div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
 				  <div class="card-body">
-					<p style="color:red"><b>Trang web Quản lý Bệnh Nhân:</b></p>
+					<p style="color:red"><b>Website Quản lý Bệnh Nhân:</b></p>
 					<p>- Tin học hoá các nghiệp vụ quản lý</p>
 					<p>- Thực hiện bệnh án điện tử</p>
 					<p>- Quản lý chặt chẽ thông tin bệnh nhân và thông tin bệnh án của bệnh nhân.</p>

@@ -5,7 +5,7 @@
 		<div class="container">
 			<?php include "navbar.php"; ?>
 			
-			<div class="card mt-3">
+			<div id ="form_mo" class="card mt-3">
 				<h5 class="card-header">Đơn thuốc</h5>
 				<div class="card-body">
 					<p class="card-text">Danh sách đơn thuốc</p>

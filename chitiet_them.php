@@ -5,8 +5,8 @@
 		<div class="container">
 			<?php include "navbar.php"; ?>
 			
-			<div class="card mt-3">
-				<h5 class="card-header">Thêm phiếu khám</h5>
+			<div id ="form_mo" class="card mt-1">
+				<h5 class="card-header">Chi tiết phiếu khám</h5>
 				<div class="card-body">
 					<form action="chitiet_them.php" method="post">
 					<input type="text" id="id" name="id" hidden />
@@ -32,7 +32,7 @@
 						
 						<button type="submit"  class="btn btn-success mb-2">Thêm Mới</button>
 					</form>
-					<table class="table  table-bordered table-hover table-sm">
+					<table id ="PhanTrang" class="table  table-bordered table-hover table-sm">
 						  <thead>
 							<tr>
 							  <th scope="col">#</th>
@@ -56,7 +56,7 @@
 		<?php include "javascript.php"; ?>
 		
 		<script>
-		
+		// hiển thị danh sách
 		db.collection("CHITIETPHIEU").get().then((querySnapshot)=> {
 				var stt = 1;
 				var output = "";
@@ -66,9 +66,9 @@
 					output+='<th scope="row">'+stt+'</th>';
 					output+='<td class="'+doc.data().maphieu.id+'"></td>';
 					output+='<td class="'+doc.data().mathuoc.id+'"></td>';
-					output+='<td>'+doc.data().soluong+'</td>';
+					output+='<td class="text-center">'+doc.data().soluong+'</td>';
 					output+='<td class="'+doc.data().mathuoc.id+'dongia"></td>';
-					output+='<td>'+doc.data().thanhtien+'</td>';
+					output+='<td class="text-center">'+doc.data().thanhtien+'</td>';
 					
 					//output+='<td class="text-center"><a href="chitiet_them.php?id='+doc.id+'"><i class="fa fa-plus-square"></i></a></td>';
 					output+='<td class="text-center"><a onclick="return confirm(\'Bạn có muốn xóa chi tiết phiếu khám không ???\')" href="chitiet_xoa.php?id='+doc.id+'"><i class="fa fa-minus-square text-danger"></i></a></td>';
@@ -76,8 +76,30 @@
 				stt++;
 				});
 				$('#HienThi').html(output);
-			
+				//phân trang
+				$(document).ready(function(){
+				$('#PhanTrang').DataTable({
+					'language': {
+						'sProcessing':   'Đang xử lý...',
+						'sLengthMenu':   'Hiển thị _MENU_ dòng',
+						'sZeroRecords':  'Không tìm thấy dòng nào phù hợp',
+						'sInfo':         'Đang xem _START_ đến _END_ trong tổng số _TOTAL_ dòng',
+						'sInfoEmpty':    'Đang xem 0 đến 0 trong tổng số 0 dòng',
+						'sInfoFiltered': '(được lọc từ _MAX_ dòng)',
+						'sInfoPostFix':  '',
+						'sSearch':       'Tìm kiếm:',
+						'sUrl':          '',
+						'oPaginate': {
+							'sFirst':    '<i class="fad fa-arrow-alt-to-left"></i>',
+							'sPrevious': '<i class="fad fa-arrow-alt-left"></i>',
+							'sNext':     '<i class="fad fa-arrow-alt-right"></i>',
+							'sLast':     '<i class="fad fa-arrow-alt-to-right"></i>'
+						}
+					}
+				});
 			});
+		});
+		//lấy tên thuốc
 		db.collection("THUOC").get().then((querySnapshot)=> {
 			
 			querySnapshot.forEach((doc)=>{
@@ -90,6 +112,7 @@
 				}catch{}
 			});
 		});
+		//lấy đơn giá
 		db.collection("THUOC").get().then((querySnapshot)=> {
 				
 				querySnapshot.forEach((doc)=>{
@@ -102,6 +125,7 @@
 					}catch{}
 				});
 		});
+		//lấy mã phiếu
 		db.collection("PHIEUKHAM").get().then((querySnapshot)=> {
 			
 			querySnapshot.forEach((doc)=>{
@@ -115,13 +139,13 @@
 			});
 		});
 		</script>
-		<script>
 		
-		db.collection("THUOC").get().then((querySnapshot)=> {
+		<script>
+		//đổ dữ liệu select
+		db.collection("THUOC").orderBy("tenthuoc", "asc").get().then((querySnapshot)=> {
 					var output = "";
 				  querySnapshot.forEach((doc)=>{					 
-					output+='<option value="'+doc.id+'">'+doc.data().tenthuoc+'</option>';
-					
+					output+='<option value="'+doc.id+'">'+doc.data().tenthuoc+'</option>';					
 				});
 				$('#HienThiThuoc').html(output);
 				
@@ -129,9 +153,9 @@
 		
 		</script>
 		<script>
+		//sự kiện cập nhật đơn giá khi thuốc thay đổi
 			function thuocChanged()
 			{
-				var message = document.getElementById('show_message');
 				var x = document.getElementById("HienThiThuoc").value;
 				var docRef = db.collection("THUOC").doc(x);
 				docRef.get().then((doc) => {
@@ -146,8 +170,6 @@
 				}).catch((error) => {
 					console.log("Error getting document:", error);
 				});
-				//message.innerHTML = "Bạn đã chọn giới tính"+;
-				
 			}
 
 			</script>
@@ -191,7 +213,7 @@
 		})
 		.then((docRef) => {
 			///console.log("Document written with ID: ", docRef.id);
-			location.href="chitiet_them.php";
+			location.href="phieukham.php";
 		})
 		.catch((error) => {
 			console.error("Error adding document: ", error);

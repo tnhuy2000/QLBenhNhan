@@ -77,3 +77,12 @@
 		
 	</div>
 </nav>
+<div id="head-link">
+	<div id="head-link3">	
+		<font color="#FFFFFF">
+		<marquee onmouseover= "this.stop();" onmouseout="this.start();">
+			 Website quản lý bệnh nhân - đồng hành cùng bệnh nhân trên những chặng đường tương lai; cùng tạo ra những giá trị Bền vững – Tận tâm – Hiệu quả.
+		</marquee>	
+		</font>
+	</div> 
+</div>

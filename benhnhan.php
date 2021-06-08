@@ -5,7 +5,7 @@
 		<div class="container">
 			<?php include "navbar.php"; ?>
 			
-			<div class="card  border rounded-left mt-3 " >
+			<div id ="form_mo" class="card  border rounded-left mt-1 " >
 				<h5 class="card-header">Bệnh nhân</h5>
 				<div class="card-body">
 				

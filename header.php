@@ -10,6 +10,6 @@
 	<link rel="stylesheet" href="https://cdn.datatables.net/1.10.24/css/dataTables.bootstrap4.min.css" />
 	<link rel="stylesheet" href="css/all.min.css" />
 	<link rel="stylesheet" href="css/custom.css" />
-	
+	<link rel="stylesheet" type="text/css" href="css/body.css" />
 	<title>Quản lý bệnh nhân</title>
 </head>

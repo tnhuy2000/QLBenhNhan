@@ -1,0 +1,18 @@
+body{
+		background-image: url('/images/bg.jpg');
+		background-position: bottom center;
+		background-attachment: fixed; 
+		font-family: Arial;
+	}
+#form_mo {
+	opacity: 0.95;
+}
+#head-link{
+     font-size: 14px;
+	 font-weight: bold;
+	 height: 30px;       
+	 line-height: 30px;
+     padding-left: 8px;
+     padding-right: 8px;	    
+}
+
