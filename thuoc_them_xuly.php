@@ -22,7 +22,7 @@
 			db.collection("THUOC").add({
 				mathuoc: "<?php echo $_POST['mathuoc'];?>",
 				tenthuoc: "<?php echo $_POST['tenthuoc'];?>",
-				dongia: "<?php echo $_POST['dongia'];?>"
+				dongia: <?php echo $_POST['dongia'];?>
 			})
 			.then((docRef) => {
 				///console.log("Document written with ID: ", docRef.id);
