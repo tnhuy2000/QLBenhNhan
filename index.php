@@ -43,7 +43,7 @@
 
 				<div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
 				  <div class="card-body">
-					<p>Trang web Quản lý bệnh nhân:</p>
+					  <p style="color:red"><b>Trang web Quản lý Bệnh Nhân:</b></p>
 					<p>- Tin học hoá các nghiệp vụ quản lý</p>
 					<p>- Thực hiện bệnh án điện tử</p>
 					<p>- Quản lý chặt chẽ thông tin bệnh nhân và thông tin bệnh án của bệnh nhân.</p>
@@ -73,7 +73,7 @@
 			</div>
 			<div class="card">
 			  <div class="card-body">
-				<h5 class="card-title">CỞ SỞ VẬT CHẤT</h5>
+				  <h5 class="card-title" style="color:red"><b>CỞ SỞ VẬT CHẤT</b></h5>
 				<p class="card-text">Cơ sở vật chất khang trang cùng với trang thiết bị hiện đại tạo nên sự chuyên nghiệp cho đội ngũ y bác sĩ.</p>
 				<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
 			  </div>
@@ -82,7 +82,7 @@
 			
 			<div class="card">
 			  <div class="card-body">
-				<h5 class="card-title">ĐỘI NGŨ Y BÁC SĨ</h5>
+				  <h5 class="card-title" style="color:red"><b>ĐỘI NGŨ Y BÁC SĨ</b></h5>
 				<p class="card-text">Đội ngũ y bác sĩ thân thiện, nhiệt tình, chu đáo. Đặc biệt, các y bác sĩ điều có chuyên môn cao mang đến cho bệnh nhân sự yên tâm tuyệt đối.</p>
 				<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
 			  </div>
