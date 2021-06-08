@@ -9,7 +9,7 @@
 				<h5 class="card-header">Chi tiết phiếu khám</h5>
 				<div class="card-body">
 					<form action="chitiet_them.php" method="post">
-					<input type="text" id="id" name="id" hidden />
+					<input type="text" id="id" name="id" />
 					<input type="text" id="maphieu" name="maphieu" hidden />
 					
 						<div class="form-row">
@@ -54,28 +54,37 @@
 		</div>
 		
 		<?php include "javascript.php"; ?>
-		
+		<?php
+			if(isset ($_GET['id']))
+			{
+				$ma = $_GET['id'];
+		?>
 		<script>
 		// hiển thị danh sách
 		db.collection("CHITIETPHIEU").get().then((querySnapshot)=> {
 				var stt = 1;
 				var output = "";
 			  querySnapshot.forEach((doc)=>{
-				
-				output+='<tr>';
-					output+='<th scope="row">'+stt+'</th>';
-					output+='<td class="'+doc.data().maphieu.id+'"></td>';
-					output+='<td class="'+doc.data().mathuoc.id+'"></td>';
-					output+='<td class="text-center">'+doc.data().soluong+'</td>';
-					output+='<td class="'+doc.data().mathuoc.id+'dongia"></td>';
-					output+='<td class="text-center">'+doc.data().thanhtien+'</td>';
-					
-					//output+='<td class="text-center"><a href="chitiet_them.php?id='+doc.id+'"><i class="fa fa-plus-square"></i></a></td>';
-					output+='<td class="text-center"><a onclick="return confirm(\'Bạn có muốn xóa chi tiết phiếu khám không ???\')" href="chitiet_xoa.php?id='+doc.id+'"><i class="fa fa-minus-square text-danger"></i></a></td>';
-				output+='</tr>';
-				stt++;
+				if(doc.data().maphieu.id =="<?php echo $ma;?>")
+				{
+					output+='<tr>';
+						output+='<th scope="row">'+stt+'</th>';
+						output+='<td class="'+doc.data().maphieu.id+'"></td>';
+						output+='<td class="'+doc.data().mathuoc.id+'"></td>';
+						output+='<td class="text-center">'+doc.data().soluong+'</td>';
+						output+='<td class="'+doc.data().mathuoc.id+'dongia"></td>';
+						output+='<td class="text-center">'+doc.data().thanhtien+'</td>';
+						
+						//output+='<td class="text-center"><a href="chitiet_them.php?id='+doc.id+'"><i class="fa fa-plus-square"></i></a></td>';
+						output+='<td class="text-center"><a onclick="return confirm(\'Bạn có muốn xóa chi tiết phiếu khám không ???\')" href="chitiet_xoa.php?id='+doc.id+'"><i class="fa fa-minus-square text-danger"></i></a></td>';
+					output+='</tr>';
+					stt++;
+				}
 				});
 				$('#HienThi').html(output);
+		<?php 
+			}
+		?>
 				//phân trang
 				$(document).ready(function(){
 				$('#PhanTrang').DataTable({
