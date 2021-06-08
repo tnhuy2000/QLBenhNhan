@@ -64,6 +64,8 @@
 		db.collection("CHITIETPHIEU").get().then((querySnapshot)=> {
 				var stt = 1;
 				var output = "";
+				var tt =0;
+				
 			  querySnapshot.forEach((doc)=>{
 				if(doc.data().maphieu.id =="<?php echo $ma;?>")
 				{
@@ -73,8 +75,23 @@
 						output+='<td class="'+doc.data().mathuoc.id+'"></td>';
 						output+='<td class="text-center">'+doc.data().soluong+'</td>';
 						output+='<td class="'+doc.data().mathuoc.id+'dongia"></td>';
-						output+='<td class="text-center">'+doc.data().thanhtien+'</td>';
-						
+						if(doc.data().thanhtien>=1000 && doc.data().thanhtien<1000000)
+						{
+							output+='<td class="text-center">'+doc.data().thanhtien/1000+'.000 VNĐ'+'</td>';
+						}
+						if(doc.data().thanhtien>=1000000)
+						{
+							output+='<td class="text-center">'+doc.data().thanhtien/1000000+'.000.000 VNĐ'+'</td>';
+						}
+						if(doc.data().thanhtien=="")
+						{
+							tt=0;
+						}
+						tt+= doc.data().thanhtien;
+						var washingtonRef = db.collection("PHIEUKHAM").doc(doc.data().maphieu.id);
+						washingtonRef.update({
+						tongtien:tt
+						});
 						//output+='<td class="text-center"><a href="chitiet_them.php?id='+doc.id+'"><i class="fa fa-plus-square"></i></a></td>';
 						output+='<td class="text-center"><a onclick="return confirm(\'Bạn có muốn xóa chi tiết phiếu khám không ???\')" href="chitiet_xoa.php?id='+doc.id+'"><i class="fa fa-minus-square text-danger"></i></a></td>';
 					output+='</tr>';

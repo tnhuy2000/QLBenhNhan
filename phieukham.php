@@ -51,8 +51,14 @@
 					output+='<td class="'+doc.data().manhanvien.id+'"></td>';
 					output+='<td>'+doc.data().tenbenh+'</td>';
 					output+='<td>'+doc.data().ngaykham+'</td>';
-					output+='<td>'+doc.data().tongtien+'</td>';
-					
+					if(doc.data().tongtien>=1000 && doc.data().tongtien<1000000)
+					{
+						output+='<td>'+doc.data().tongtien/1000+'.000 VNĐ'+'</td>';
+					}
+					if(doc.data().tongtien>=1000000)
+					{
+						output+='<td>'+doc.data().tongtien/1000000+'.000.000 VNĐ'+'</td>';
+					}
 					output+='<td class="text-center"><a href="chitiet_them.php?id='+doc.id+'"><i class="fa fa-plus-square"></i></a></td>';
 					output+='<td class="text-center"><a onclick="return confirm(\'Bạn có muốn xóa phiếu '+doc.data().maphieu+' không ???\')" href="phieukham_xoa.php?id='+doc.id+'"><i class="fa fa-minus-square text-danger"></i></a></td>';
 				output+='</tr>';
