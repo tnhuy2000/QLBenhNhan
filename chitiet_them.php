@@ -9,9 +9,12 @@
 				<h5 class="card-header">Chi tiết phiếu khám</h5>
 				<div class="card-body">
 					<form action="chitiet_them.php" method="post">
-					<input type="text" id="id" name="id" />
-					<input type="text" id="maphieu" name="maphieu" hidden />
+						<input type="text" id="id" name="id" hidden>
 					
+						<div class="form-group col-md-4">
+							<label for="mathuoc">Mã phiếu</label>
+							<input type="text" class="form-control" id="maphieu" name="maphieu" readonly>
+						</div>
 						<div class="form-row">
 							<div class="form-group col-md-4">
 								<label for="mathuoc">Tên thuốc</label>
@@ -99,32 +102,37 @@
 				}
 				});
 				$('#HienThi').html(output);
-		<?php 
-			}
-		?>
-				//phân trang
-				$(document).ready(function(){
-				$('#PhanTrang').DataTable({
-					'language': {
-						'sProcessing':   'Đang xử lý...',
-						'sLengthMenu':   'Hiển thị _MENU_ dòng',
-						'sZeroRecords':  'Không tìm thấy dòng nào phù hợp',
-						'sInfo':         'Đang xem _START_ đến _END_ trong tổng số _TOTAL_ dòng',
-						'sInfoEmpty':    'Đang xem 0 đến 0 trong tổng số 0 dòng',
-						'sInfoFiltered': '(được lọc từ _MAX_ dòng)',
-						'sInfoPostFix':  '',
-						'sSearch':       'Tìm kiếm:',
-						'sUrl':          '',
-						'oPaginate': {
-							'sFirst':    '<i class="fad fa-arrow-alt-to-left"></i>',
-							'sPrevious': '<i class="fad fa-arrow-alt-left"></i>',
-							'sNext':     '<i class="fad fa-arrow-alt-right"></i>',
-							'sLast':     '<i class="fad fa-arrow-alt-to-right"></i>'
+		
+			//phân trang
+			$(document).ready(function(){
+			$('#PhanTrang').DataTable({
+				'language': {
+					'sProcessing':   'Đang xử lý...',
+					'sLengthMenu':   'Hiển thị _MENU_ dòng',
+					'sZeroRecords':  'Không tìm thấy dòng nào phù hợp',
+					'sInfo':         'Đang xem _START_ đến _END_ trong tổng số _TOTAL_ dòng',
+					'sInfoEmpty':    'Đang xem 0 đến 0 trong tổng số 0 dòng',
+					'sInfoFiltered': '(được lọc từ _MAX_ dòng)',
+					'sInfoPostFix':  '',
+					'sSearch':       'Tìm kiếm:',
+					'sUrl':          '',
+					'oPaginate': {
+						'sFirst':    '<i class="fad fa-arrow-alt-to-left"></i>',
+						'sPrevious': '<i class="fad fa-arrow-alt-left"></i>',
+						'sNext':     '<i class="fad fa-arrow-alt-right"></i>',
+						'sLast':     '<i class="fad fa-arrow-alt-to-right"></i>'
 						}
 					}
 				});
 			});
+			
 		});
+		</script>
+		<?php 
+			}
+		?>
+		
+		<script>
 		//lấy tên thuốc
 		db.collection("THUOC").get().then((querySnapshot)=> {
 			
@@ -198,7 +206,7 @@
 				});
 			}
 
-			</script>
+		</script>
 		
 		<?php
 		//lấy id từ form phiếu khám sang form chi tiết

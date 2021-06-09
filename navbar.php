@@ -35,7 +35,7 @@
 						</a>
 					</li>
 					<li class="nav-item active">
-						<a class="nav-link" href="chitiet_them.php">
+						<a class="nav-link" href="chitiet_xem.php">
 							<i class="fa fa-list-alt" aria-hidden="true"></i> Đơn thuốc
 						</a>
 					</li>

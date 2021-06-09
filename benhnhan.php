@@ -14,9 +14,9 @@
 						  <thead>
 								<tr>
 								  <th scope="col" >#</th>
-								  <th scope="col" class="text-center" width="11%">Mã bệnh nhân</th>
+								  <th scope="col" class="text-center" width="13%">Mã bệnh nhân</th>
 								  <th scope="col" class="text-center" width="15%">Tên bệnh nhân</th>
-								  <th scope="col" class="text-center" width="8%">Bảo hiểm</th>
+								  <th scope="col" class="text-center" width="10%">Bảo hiểm</th>
 								  <th scope="col" class="text-center" >Địa chỉ</th>
 								  <th scope="col" class="text-center" width="9%">Ngày sinh</th>
 								  <th scope="col" class="text-center" width="10%">Điện thoại</th>
@@ -47,9 +47,9 @@
 				output+='<tr>';
 					output+='<th scope="row">'+stt+'</th>';
 					output+='<td class="text-center"><span class="d-block text-primary">'+doc.data().mabenhnhan+'</td>';
-					output+='<td class="text-center"><span class="d-block text-success">'+doc.data().tenbenhnhan+'</td>';
+					output+='<td ><span class="d-block text-success">'+doc.data().tenbenhnhan+'</td>';
 					output+='<td class="text-center">'+doc.data().mabaohiem+'</td>';
-					output+='<td >'+doc.data().diachi+'</td>';
+					output+='<td class="text-center small">'+doc.data().diachi+'</td>';
 					output+='<td class="text-center">'+doc.data().ngaysinh+'</td>';
 					output+='<td class="text-center">'+doc.data().dienthoai+'</td>';
 					

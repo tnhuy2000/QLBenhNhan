@@ -9,24 +9,25 @@
 				<h5 class="card-header">Thêm phiếu khám</h5>
 				<div class="card-body">
 					<form action="phieukham_them.php" method="post">
-					<input type="text" id="id" name="id" hidden />
+					<input type="text" id="id" name="id" hidden>
 						<div class="form-group">
-							<label for="maphieu">Mã phiếu</label>
+							<label for="maphieu">Mã phiếu </label>
 							<input type="text" class="form-control" id="maphieu" name="maphieu">
 						</div>
-						<div class="form-group">
-							<label for="mabenhnhan">Bệnh nhân</label>
-							<select class="custom-select" id="HienThiBenhNhan" name="mabenhnhan" required>
-								
-							</select>
+						<div class="form-row">
+							<div class="form-group col-md-6">
+								<label for="mabenhnhan">Bệnh nhân</label>
+								<select class="custom-select" id="HienThiBenhNhan" name="mabenhnhan" required>
+									
+								</select>
+							</div>
+							<div class="form-group col-md-6">
+								<label for="manhanvien">Nhân Viên</label>
+								<select class="custom-select" id="HienThiNhanVien" name="manhanvien" required>
+									
+								</select>
+							</div>
 						</div>
-						<div class="form-group">
-							<label for="manhanvien">Nhân Viên</label>
-							<select class="custom-select" id="HienThiNhanVien" name="manhanvien" required>
-								
-							</select>
-						</div>
-						
 						<div class="form-group">
 							<label for="tenbenh">Tên bệnh</label>
 							<input type="text" class="form-control" id="tenbenh" name="tenbenh">
