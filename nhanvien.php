@@ -37,7 +37,7 @@
 		
 		<script>
 		
-		db.collection("NHANVIEN").orderBy("manhanvien", "asc").get().then((querySnapshot) => {
+		db.collection("NHANVIEN").orderBy("manhanvien", "desc").get().then((querySnapshot) => {
 			var stt = 1;
 			var output = "";
 			

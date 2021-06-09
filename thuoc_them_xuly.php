@@ -31,7 +31,7 @@
 			.catch((error) => {
 				console.error("Error adding document: ", error);
 			});
-
+		
 		</script>
 	
 	</body>

@@ -39,13 +39,12 @@
 		<script>
 			
 			
-			db.collection("PHIEUKHAM").orderBy("maphieu", "asc").get().then((querySnapshot)=> {
+			db.collection("PHIEUKHAM").orderBy("maphieu", "desc").get().then((querySnapshot)=> {
 				var stt = 1;
 				var output = "";
 				var tt = 1;
 			  querySnapshot.forEach((doc)=>{
 				capnhattongtien(doc.id);
-				capnhattongtienbaohiem(doc.id,doc.data().mabenhnhan.id);
 				output+='<tr>';
 					output+='<th scope="row">'+stt+'</th>';
 					output+='<td>'+doc.data().maphieu+'</td>';
@@ -53,7 +52,7 @@
 					output+='<td class="'+doc.data().manhanvien.id+'"></td>';
 					output+='<td>'+doc.data().tenbenh+'</td>';
 					output+='<td>'+doc.data().ngaykham+'</td>';
-					console.log(doc.data().mabenhnhan.id);
+					//console.log(doc.data().mabenhnhan.id);
 					if(doc.data().tongtien>=1000 && doc.data().tongtien<1000000)
 					{
 						output+='<td>'+doc.data().tongtien/1000+'.000 VNĐ'+'</td>';
@@ -95,6 +94,7 @@
 					});
 				});
 			});
+			//lấy tên bệnh nhân
 			db.collection("BENHNHAN").get().then((querySnapshot)=> {
 				
 			  querySnapshot.forEach((doc)=>{
@@ -108,7 +108,7 @@
 				  }catch{}
 			  });
 			});
-			
+			//lây tên nhân viên
 			db.collection("NHANVIEN").get().then((querySnapshot)=> {
 				
 			  querySnapshot.forEach((doc)=>{
@@ -135,7 +135,7 @@
 					}catch{}
 				});
 			});
-			db.collection("PHIEUKHAM").get().then((querySnapshot)=> {
+			db.collection("CHITIETPHIEU").get().then((querySnapshot)=> {
 				
 				querySnapshot.forEach((doc)=>{
 					try{
@@ -174,39 +174,7 @@
 				});
 			});			
 		}
-		function capnhattongtienbaohiem(maphieu,mabenhnhan)
-		{
-			var tt = 0;
-			db.collection("PHIEUKHAM").get().then((querySnapshot)=> {
-				querySnapshot.forEach((doc)=>{
-					if(doc.data().maphieu.id == maphieu)
-					{
-						tt=doc.data().tongtien*80/100;
-						if(kiemtrabaohiem(mabenhnhan)==true)
-						{
-							var washingtonRef = db.collection("PHIEUKHAM").doc(doc.data().maphieu.id);
-							washingtonRef.update({
-							tongtien:tt
-							});
-						}
-					}
-				});
-			});			
-		}
-		function kiemtrabaohiem(mabenhnhan)
-		{
-			db.collection("BENHNHAN").get().then((querySnapshot)=> {
-				querySnapshot.forEach((doc)=>{
-					if(doc.data().mabenhnhan.id==mabenhnhan)
-					{
-						if(doc.data().mabaohiem=='Không')
-							return false;
-						else
-							return true;
-					}
-				});
-			});			
-		}
+		
 		</script>
 	</body>
 </html>

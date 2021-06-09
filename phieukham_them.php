@@ -12,7 +12,7 @@
 					<input type="text" id="id" name="id" hidden>
 						<div class="form-group">
 							<label for="maphieu">Mã phiếu </label>
-							<input type="text" class="form-control" id="maphieu" name="maphieu">
+							<input type="text" class="form-control" id="maphieu" name="maphieu" required>
 						</div>
 						<div class="form-row">
 							<div class="form-group col-md-6">
@@ -30,11 +30,11 @@
 						</div>
 						<div class="form-group">
 							<label for="tenbenh">Tên bệnh</label>
-							<input type="text" class="form-control" id="tenbenh" name="tenbenh">
+							<input type="text" class="form-control" id="tenbenh" name="tenbenh" required>
 						</div>
 					
 						
-						<button type="submit"  class="btn btn-success">Thêm Mới</button>
+						<button type="submit"  class="btn btn-success btn-lg">Thêm Mới</button>
 					</form>
 				</div>
 			</div>

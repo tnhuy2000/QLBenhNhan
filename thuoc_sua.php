@@ -26,7 +26,7 @@
 							<input type="text" class="form-control" id="dongia" name="dongia" required />
 						</div>
 						
-						<button type="submit" class="btn btn-info">Cập nhật</button>
+						<button type="submit" class="btn btn-info btn-lg">Cập nhật</button>
 					</form>
 				</div>
 			</div>

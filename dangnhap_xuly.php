@@ -5,7 +5,7 @@
 		<div class="container">
 			<?php include "navbar.php"; ?>
 			
-			<div id ="form_mo" class="card mt-3">
+			<div id ="form_mo" class="card mt-1">
 				<h5 class="card-header">Xử lý đăng nhập</h5>
 				<div class="card-body">
 					<div id="KetQua">

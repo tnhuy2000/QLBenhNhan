@@ -37,7 +37,7 @@
 		
 		<script>
 		//var league = db.collection("BENHNHAN").doc('mabenhnhan').get().data().maphong.get().data();
-		db.collection("BENHNHAN").orderBy("mabenhnhan", "asc").get().then((querySnapshot) => {
+		db.collection("BENHNHAN").orderBy("mabenhnhan", "desc").get().then((querySnapshot) => {
 			var stt = 1;
 			var output = "";
 			

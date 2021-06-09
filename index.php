@@ -71,6 +71,7 @@
 				
 			  
 			</div>
+			
 			<div class="card">
 			  <div class="card-body">
 				<h5 class="card-title" style="color:red"><b>CỞ SỞ VẬT CHẤT</b></h5>
@@ -88,10 +89,34 @@
 			  </div>
 			  <img class="card-img-bottom img-thumbnail" src="images/banner7.jpg" alt="Card image cap">
 			</div>
-			
+			<div class="text-center p-2" style="background-color: white">
+				<font color="darkgreen">
+					<marquee onmouseover= "this.stop();" onmouseout="this.start();">
+						 Chúng tôi luôn sẵn sàng phục vụ !&nbsp;Hotline: 0368 672 641
+					</marquee>	
+				</font>
+			</div>	
 			<?php include "footer.php"; ?>
+			
+			<div class="button_scroll2top" onclick="page_scroll2top()">
+				<i class="fa fa-chevron-up"/>
+			</div>
 		</div>
 		
 		<?php include "javascript.php"; ?>
+		<script>
+			$(window).scroll(function(){
+				if($(window).scrollTop() >= 10) {
+					$('.button_scroll2top').show();
+				} else {
+					$('.button_scroll2top').hide();
+				}
+			});
+			function page_scroll2top(){
+				$('html,body').animate({
+					scrollTop: 0
+				}, 'fast');
+			}
+		</script>
 	</body>
 </html>

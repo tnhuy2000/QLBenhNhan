@@ -13,7 +13,7 @@
 					<table id="PhanTrang" class="table table-bordered table-hover table-sm">
 						  <thead>
 							<tr>
-							  <th scope="col">#</th>
+							  <th scope="col" class="text-center">#</th>
 							  <th scope="col" class="text-center" width="15%">Mã thuốc</th>
 							  <th scope="col" class="text-center">Tên thuốc</th>
 							  <th scope="col" class="text-center">Đơn giá</th>
@@ -35,14 +35,14 @@
 		
 		<script>
 		
-		db.collection("THUOC").orderBy("mathuoc", "asc").get().then((querySnapshot) => {
+		db.collection("THUOC").orderBy("mathuoc", "desc").get().then((querySnapshot) => {
 			var stt = 1;
 			var output = "";
 			
 			querySnapshot.forEach((doc) => {
 				
 				output+='<tr>';
-					output+='<th scope="row">'+stt+'</th>';
+					output+='<th scope="row" class="text-center">'+stt+'</th>';
 					output+='<td class="text-center"><span class="d-block text-primary">'+doc.data().mathuoc+'</td>';
 					output+='<td class="text-center"><span class="d-block text-success">'+doc.data().tenthuoc+'</td>';
 					output+='<td class="text-center">'+doc.data().dongia+'</td>';

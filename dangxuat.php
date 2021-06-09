@@ -5,7 +5,7 @@
 		<div class="container">
 			<?php include "navbar.php"; ?>
 			
-			<div id ="form_mo" class="card mt-3">
+			<div id ="form_mo" class="card mt-1">
 				<h5 class="card-header">Xử lý đăng xuất</h5>
 				<div class="card-body">				
 					<p class="card-text">Đang xử lý đăng xuất....</p>

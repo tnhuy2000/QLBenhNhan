@@ -12,29 +12,29 @@
 						<div class="form-row">
 							<div class="form-group col-md-6">
 								<label for="manhanvien">Mã nhân viên</label>
-								<input type="text" class="form-control" id="manhanvien" name="manhanvien">
+								<input type="text" class="form-control" id="manhanvien" name="manhanvien" required>
 							</div>
 							<div class="form-group col-md-6">
 								<label for="tennhanvien">Tên nhân viên</label>
-								<input type="text" class="form-control" id="tennhanvien" name="tennhanvien">
+								<input type="text" class="form-control" id="tennhanvien" name="tennhanvien" required>
 							</div>
 						</div>
 						<div class="form-group">
 							<label for="diachi">Địa chỉ</label>
-							<input type="text" class="form-control" id="diachi" name="diachi">
+							<input type="text" class="form-control" id="diachi" name="diachi" required>
 						</div>
 						<div class="form-row">
 							<div class="form-group col-md-6">
 								<label for="ngaysinh">Ngày sinh</label>
-								<input type="text" class="form-control" id="ngaysinh" name="ngaysinh">
+								<input type="text" class="form-control" id="ngaysinh" name="ngaysinh" required>
 							</div>
 							<div class="form-group col-md-6">
 								<label for="dienthoai">Điện thoại</label>
-								<input type="text" class="form-control" id="dienthoai" name="dienthoai">
+								<input type="text" class="form-control" id="dienthoai" name="dienthoai"required>
 							</div>
 						</div>
 					  
-					  <button type="submit" class="btn btn-success">Thêm Mới</button>
+					  <button type="submit" class="btn btn-success btn-lg">Thêm Mới</button>
 					</form>
 				</div>
 			</div>

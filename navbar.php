@@ -1,5 +1,5 @@
 
-<nav class="navbar navbar-expand-lg  navbar-dark bg-success" >
+<nav class="navbar navbar-expand-lg rounded-lg  navbar-dark bg-success" >
 	
 	<a class="navbar-brand" href="index.php">
 		<i class="fa fa-heartbeat" aria-hidden="true" style="color:red"></i>

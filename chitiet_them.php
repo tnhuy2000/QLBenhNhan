@@ -10,7 +10,7 @@
 				<div class="card-body">
 					<form action="chitiet_them.php" method="post">
 						<input type="text" id="id" name="id" hidden>
-					
+						
 						<div class="form-group col-md-4">
 							<label for="mathuoc">Mã phiếu</label>
 							<input type="text" class="form-control" id="maphieu" name="maphieu" readonly>

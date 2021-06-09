@@ -11,5 +11,7 @@
 	<link rel="stylesheet" href="css/all.min.css" />
 	<link rel="stylesheet" href="css/custom.css" />
 	<link rel="stylesheet" type="text/css" href="css/body.css" />
+	
+	
 	<title>Quản lý bệnh nhân</title>
 </head>

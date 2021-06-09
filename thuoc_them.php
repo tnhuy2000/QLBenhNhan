@@ -11,20 +11,20 @@
 					<form action="thuoc_them_xuly.php" method="post">
 					  <div class="form-group">
 						<label for="mathuoc">Mã thuốc</label>
-						<input type="text" class="form-control" id="mathuoc" name="mathuoc">
+						<input type="text" class="form-control" id="mathuoc" name="mathuoc" required>
 					  </div>
 					  
 					  <div class="form-group">
 						<label for="tenthuoc">Tên thuốc</label>
-						<input type="text" class="form-control" id="tenthuoc" name="tenthuoc">
+						<input type="text" class="form-control" id="tenthuoc" name="tenthuoc" required>
 					  </div>
 					  
 					  <div class="form-group">
 						<label for="dongia">Đơn giá</label>
-						<input type="text" class="form-control" id="dongia" name="dongia">
+						<input type="text" class="form-control" id="dongia" name="dongia" required>
 					  </div>
 					  
-					  <button type="submit" class="btn btn-success">Thêm Mới</button>
+					  <button type="submit" class="btn btn-success btn-lg ">Thêm Mới</button>
 					</form>
 				</div>
 			</div>

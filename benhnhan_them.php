@@ -12,33 +12,33 @@
 						<div class="form-row">
 							<div class="form-group col-md-6">
 								<label for="mabenhnhan">Mã bệnh nhân</label>
-								<input type="text" class="form-control" id="mabenhnhan" name="mabenhnhan">
+								<input type="text" class="form-control" id="mabenhnhan" name="mabenhnhan" required>
 							</div>
 							<div class="form-group col-md-6">
 								<label for="tenbenhnhan">Tên bệnh nhân</label>
-								<input type="text" class="form-control" id="tenbenhnhan" name="tenbenhnhan">
+								<input type="text" class="form-control" id="tenbenhnhan" name="tenbenhnhan" required>
 							</div>
 						</div>
 						<div class="form-group">
 							<label for="mabaohiem">Mã bảo hiểm</label>
-							<input type="text" class="form-control" id="mabaohiem" name="mabaohiem">
+							<input type="text" class="form-control" id="mabaohiem" name="mabaohiem" required>
 						</div>
 						<div class="form-row">
 							<div class="form-group col-md-6">
 								<label for="ngaysinh">Ngày sinh</label>
-								<input type="text" class="form-control" id="ngaysinh" name="ngaysinh">
+								<input type="text" class="form-control" id="ngaysinh" name="ngaysinh" placeholder="dd/MM/yyyy" required>
 							</div>
 							<div class="form-group col-md-6">
 								<label for="dienthoai">Điện thoại</label>
-								<input type="text" class="form-control" id="dienthoai" name="dienthoai">
+								<input type="text" class="form-control" id="dienthoai" name="dienthoai" required>
 							</div>
 						</div>
 						<div class="form-group">
 							<label for="diachi">Địa chỉ</label>
-							<input type="text" class="form-control" id="diachi" name="diachi">
+							<input type="text" class="form-control" id="diachi" name="diachi" required>
 						</div>
 					  
-						<button type="submit" class="btn btn-success">Thêm Mới</button>
+						<button type="submit" class="btn btn-success btn-lg">Thêm Mới</button>
 					</form>
 				</div>
 			</div>
