@@ -44,7 +44,7 @@
 		
 		<?php include "javascript.php"; ?>
 		<script>
-		
+	
 		db.collection("BENHNHAN").orderBy("tenbenhnhan", "asc").get().then((querySnapshot)=> {
 					var output = "";
 				  querySnapshot.forEach((doc)=>{					 

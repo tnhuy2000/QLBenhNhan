@@ -52,7 +52,7 @@
 				manhanvien: "<?php echo $_POST['manhanvien'];?>",
 				tennhanvien: "<?php echo $_POST['tennhanvien'];?>",
 				diachi: "<?php echo $_POST['diachi'];?>",
-				ngaysinh:  firebase.firestore.Timestamp.fromDate(new Date("<?php echo $_POST['ngaysinh']; ?>")),
+				ngaysinh:  "<?php echo $_POST['ngaysinh']; ?>",
 				dienthoai: "<?php echo $_POST['dienthoai'];?>"
 			})
 			.then((docRef) => {

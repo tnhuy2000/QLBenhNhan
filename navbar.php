@@ -15,7 +15,14 @@
 			session_start();
 			if(!isset($_SESSION['uid']))
 			{
-		?>	
+		?>		
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item active">
+						<a class="nav-link" href="gioithieu.php">
+							<i class="fa fa-info-circle"></i> Giới thiệu
+						</a>
+					</li>
+				</ul>
 				<ul class="navbar-nav ml-auto">
 					<li class="nav-item active">
 						<a class="nav-link" href="dangnhap.php">
@@ -23,11 +30,19 @@
 						</a>
 					</li>
 				</ul>
+				
 		<?php
 			}
 			else
 			{
 		?>
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item active">
+						<a class="nav-link" href="gioithieu.php">
+							<i class="fa fa-info-circle"></i> Giới thiệu
+						</a>
+					</li>
+				</ul>
 				<ul class="navbar-nav mr-auto">
 					<li class="nav-item active">
 						<a class="nav-link" href="phieukham.php">

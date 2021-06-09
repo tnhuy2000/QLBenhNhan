@@ -38,7 +38,7 @@
 							<input type="text" class="form-control" id="diachi" name="diachi" required>
 						</div>
 					  
-						<button type="submit" class="btn btn-success btn-lg">Thêm Mới</button>
+						<button type="submit" class="btn btn-success btn-lg" onclick="kientra(mabenhnhan)">Thêm Mới</button>
 					</form>
 				</div>
 			</div>
@@ -50,48 +50,25 @@
 		<?php
 		if(isset ($_POST['mabenhnhan']))
 		{
-			?>
+		?>
 		<script>
 		
-		function kiemtra()
-		{
-			var ktra =0;
-			db.collection("BENHNHAN").orderBy("mabenhnhan", "desc").get().then((querySnapshot) => {
-				querySnapshot.forEach((doc) => {
-					if(doc.data().mabenhnhan=="<?php echo $_POST['mabenhnhan'];?>")
-					{
-						//thứ ngôn ngữ ngu
-						return false;
-					}
-				});
+		
+			db.collection("BENHNHAN").add({
+				mabenhnhan: "<?php echo $_POST['mabenhnhan'];?>",
+				tenbenhnhan: "<?php echo $_POST['tenbenhnhan'];?>",
+				mabaohiem: "<?php echo $_POST['mabaohiem'];?>",
+				diachi: "<?php echo $_POST['diachi'];?>",
+				ngaysinh: "<?php echo $_POST['ngaysinh'];?>",
+				dienthoai: "<?php echo $_POST['dienthoai'];?>"
+			})
+			.then((docRef) => {
+				console.log("Document written with ID: ", docRef.id);
+				location.href="benhnhan.php";
+			})
+			.catch((error) => {
+				console.error("Error adding document: ", error);
 			});
-			return true;
-		}
-		if(kiemtra()==false)
-		{
-			console.log('mã bị trùng');
-		}
-		else
-		{
-			console.log('thêm thành công');
-		}
-			//db.collection("BENHNHAN").add({
-				//mabenhnhan: "<?php echo $_POST['mabenhnhan'];?>",
-				//tenbenhnhan: "<?php echo $_POST['tenbenhnhan'];?>",
-				//mabaohiem: "<?php echo $_POST['mabaohiem'];?>",
-				//diachi: "<?php echo $_POST['diachi'];?>",
-				//ngaysinh: "<?php echo $_POST['ngaysinh'];?>",
-				//dienthoai: "<?php echo $_POST['dienthoai'];?>"
-			//})
-			//.then((docRef) => {
-				///console.log("Document written with ID: ", docRef.id);
-				 
-				
-				//location.href="benhnhan.php";
-			//})
-			//.catch((error) => {
-				//console.error("Error adding document: ", error);
-			//});
 
 		</script>
 		<?php

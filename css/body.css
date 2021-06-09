@@ -1,8 +1,7 @@
 body{
 		background-image: url('/images/bg.jpg');
 		background-position: bottom center;
-		background-attachment: fixed; 
-		font-family: Arial;
+		background-attachment: fixed;
 	}
 #form_mo {
 	opacity: 0.95;

@@ -35,7 +35,7 @@
 						</div>
 					</div>
 					<div class="col-xs-6">
-						<p class="lead" align="center">TRANG WEB QUẢN LÝ BỆNH NHÂN </p>
+						<p class="lead" align="center">WEBSITE QUẢN LÝ BỆNH NHÂN </p>
 						<ul class="list-unstyled" style="line-height: 2">
 							<li><span class="fa fa-check text-success"></span> Bền vững – Tận tâm – Hiệu quả
 							</li>
