@@ -68,7 +68,7 @@
 				var stt = 1;
 				var output = "";
 				var tt =0;
-				
+				var test =0;
 			  querySnapshot.forEach((doc)=>{
 				if(doc.data().maphieu.id =="<?php echo $ma;?>")
 				{

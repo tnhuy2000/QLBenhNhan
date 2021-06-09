@@ -42,8 +42,9 @@
 			db.collection("PHIEUKHAM").orderBy("maphieu", "asc").get().then((querySnapshot)=> {
 				var stt = 1;
 				var output = "";
+				var tt = 1;
 			  querySnapshot.forEach((doc)=>{
-				
+				capnhattongtien(doc.id);
 				output+='<tr>';
 					output+='<th scope="row">'+stt+'</th>';
 					output+='<td>'+doc.data().maphieu+'</td>';
@@ -51,6 +52,7 @@
 					output+='<td class="'+doc.data().manhanvien.id+'"></td>';
 					output+='<td>'+doc.data().tenbenh+'</td>';
 					output+='<td>'+doc.data().ngaykham+'</td>';
+					
 					if(doc.data().tongtien>=1000 && doc.data().tongtien<1000000)
 					{
 						output+='<td>'+doc.data().tongtien/1000+'.000 VNĐ'+'</td>';
@@ -119,8 +121,60 @@
 				  }catch{}
 			  });
 			});
+			//lấy mã phiếu
+			db.collection("PHIEUKHAM").get().then((querySnapshot)=> {
+				
+				querySnapshot.forEach((doc)=>{
+					try{
+						let x=document.getElementsByClassName(doc.id);
+						for(let i=0;i<x.length;i++)
+						{
+							x[i].innerText=doc.data().maphieu;
+						}
+					}catch{}
+				});
+			});
+			db.collection("PHIEUKHAM").get().then((querySnapshot)=> {
+				
+				querySnapshot.forEach((doc)=>{
+					try{
+						let x=document.getElementsByClassName(doc.id+'thanhtien');
+						for(let i=0;i<x.length;i++)
+						{
+							x[i].innerText=doc.data().thanhtien;
+						}
+					}catch{}
+				});
+			});
 			
-		
+		function capnhattongtien(maphieu)
+		{
+			var tt = 0;
+			db.collection("CHITIETPHIEU").get().then((querySnapshot)=> {
+				querySnapshot.forEach((doc)=>{
+					if(doc.data().maphieu.id == maphieu)
+					{
+						if(doc.data().thanhtien=="")
+						{
+							tt=0;
+							
+						}
+						else
+						{
+							tt+=doc.data().thanhtien;
+						}
+						var washingtonRef = db.collection("PHIEUKHAM").doc(doc.data().maphieu.id);
+						washingtonRef.update({
+						tongtien:tt
+						});
+						console.log(''+maphieu+''+tt);
+					}
+
+
+				});
+			});
+			
+		}
 		</script>
 	</body>
 </html>
