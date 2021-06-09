@@ -52,23 +52,46 @@
 		{
 			?>
 		<script>
-			db.collection("BENHNHAN").add({
-				mabenhnhan: "<?php echo $_POST['mabenhnhan'];?>",
-				tenbenhnhan: "<?php echo $_POST['tenbenhnhan'];?>",
-				mabaohiem: "<?php echo $_POST['mabaohiem'];?>",
-				diachi: "<?php echo $_POST['diachi'];?>",
-				ngaysinh: "<?php echo $_POST['ngaysinh'];?>",
-				dienthoai: "<?php echo $_POST['dienthoai'];?>"
-			})
-			.then((docRef) => {
+		
+		function kiemtra()
+		{
+			var ktra =0;
+			db.collection("BENHNHAN").orderBy("mabenhnhan", "desc").get().then((querySnapshot) => {
+				querySnapshot.forEach((doc) => {
+					if(doc.data().mabenhnhan=="<?php echo $_POST['mabenhnhan'];?>")
+					{
+						//thứ ngôn ngữ ngu
+						return false;
+					}
+				});
+			});
+			return true;
+		}
+		if(kiemtra()==false)
+		{
+			console.log('mã bị trùng');
+		}
+		else
+		{
+			console.log('thêm thành công');
+		}
+			//db.collection("BENHNHAN").add({
+				//mabenhnhan: "<?php echo $_POST['mabenhnhan'];?>",
+				//tenbenhnhan: "<?php echo $_POST['tenbenhnhan'];?>",
+				//mabaohiem: "<?php echo $_POST['mabaohiem'];?>",
+				//diachi: "<?php echo $_POST['diachi'];?>",
+				//ngaysinh: "<?php echo $_POST['ngaysinh'];?>",
+				//dienthoai: "<?php echo $_POST['dienthoai'];?>"
+			//})
+			//.then((docRef) => {
 				///console.log("Document written with ID: ", docRef.id);
 				 
 				
-				location.href="benhnhan.php";
-			})
-			.catch((error) => {
-				console.error("Error adding document: ", error);
-			});
+				//location.href="benhnhan.php";
+			//})
+			//.catch((error) => {
+				//console.error("Error adding document: ", error);
+			//});
 
 		</script>
 		<?php
