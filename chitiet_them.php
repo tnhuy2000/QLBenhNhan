@@ -91,10 +91,7 @@
 							tt=0;
 						}
 						tt+= doc.data().thanhtien;
-						var washingtonRef = db.collection("PHIEUKHAM").doc(doc.data().maphieu.id);
-						washingtonRef.update({
-						tongtien:tt
-						});
+						
 						//output+='<td class="text-center"><a href="chitiet_them.php?id='+doc.id+'"><i class="fa fa-plus-square"></i></a></td>';
 						output+='<td class="text-center"><a onclick="return confirm(\'Bạn có muốn xóa chi tiết phiếu khám không ???\')" href="chitiet_xoa.php?id='+doc.id+'"><i class="fa fa-minus-square text-danger"></i></a></td>';
 					output+='</tr>';
